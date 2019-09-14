@@ -47,15 +47,15 @@ heroku --version
 From the parent folder where you want the project to live:
 
 ```
-git clone https://github.com/osaisacson/extinction-rebellion.git
+git clone https://github.com/osaisacson/valkommen-hem.git
 ```
-...this will create an 'extinction-rebellion' folder with latest code.
+...this will create an 'valkommen-hem' folder with latest code.
 
 
 2. Initialize git
 
 ```
-cd extinction-rebellion
+cd valkommen-hem
 git init
 ```
 Be sure to initialize the Git repository in your app’s root directory. If your app is in a subdirectory of your repository, it won’t run when it is pushed to Heroku.
@@ -73,13 +73,13 @@ npm install (from client)
 4. Create Heroku instance
 From root:
 ```
-heroku create -b https://github.com/osaisacson/extinction-rebellion.git
+heroku create -b https://github.com/osaisacson/valkommen-hem.git
 ```
 
 
 5. Rename Heroku from the default to your project name
 ```
-heroku apps:rename extinction-rebellion
+heroku apps:rename valkommen-hem
 ```
 
 
@@ -95,8 +95,8 @@ Make changes, then:
 ```
 git add .
 git commit -m "commit message"
-git push (this pushes to the repo on git: https://github.com/osaisacson/extinction-rebellion)
-git push heroku master (this deploys to https://extinction-rebellion.herokuapp.com/)
+git push (this pushes to the repo on git: https://github.com/osaisacson/valkommen-hem)
+git push heroku master (this deploys to https://valkommen-hem.herokuapp.com/)
 ```
 
 
@@ -112,7 +112,7 @@ npm run dev
 ```
 heroku open
 ```
-...the browser address (https://extinction-rebellion.herokuapp.com/) is the live and shareable version of the app.
+...the browser address (https://valkommen-hem.herokuapp.com/) is the live and shareable version of the app.
 
 
 ## Continous work post setup
