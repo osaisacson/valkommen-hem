@@ -4,6 +4,10 @@ import axios from 'axios';
 
 import '../../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries} from 'react-vis';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import TabContainer from 'react-bootstrap/TabContainer';
 
 import Active from './components/Active';
 
@@ -21,16 +25,16 @@ function App() {
   }, [])
 
   const data = [
-    {x: 0, y: 8},
-    {x: 1, y: 5},
-    {x: 2, y: 4},
-    {x: 3, y: 9},
-    {x: 4, y: 1},
+    {x: 0, y: 6},
+    {x: 1, y: 7},
+    {x: 2, y: 6},
+    {x: 3, y: 7},
+    {x: 4, y: 8},
     {x: 5, y: 7},
-    {x: 6, y: 6},
-    {x: 7, y: 3},
-    {x: 8, y: 2},
-    {x: 9, y: 0}
+    {x: 6, y: 7},
+    {x: 7, y: 8},
+    {x: 8, y: 9},
+    {x: 9, y: 8}
   ];
 
   return user && (
@@ -41,9 +45,20 @@ function App() {
         {/* <img src={'https://rebellion.earth/wp/wp-content/themes/xr/images/xr-logo-no-symbol.svg'} className="logo" alt="logo" /> */}
       </header>
 
-      <XYPlot height={300} width={300}>
+      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+      <Tab eventKey="home" title="Hem">
+        Översikt av husnummer
+      </Tab>
+      <Tab eventKey="harvest" title="Dagens Skörd">
+        Skörden enna
+      </Tab>
+      <Tab eventKey="water" title="Vatten">
+        <h3>Vatten Regenerering i år. <p>- 122,543 liter denna månaden</p></h3>
+      <XYPlot height={300} width={400}>
         <LineSeries data={data} />
       </XYPlot>
+      </Tab>
+    </Tabs>
 
       {/* <Active /> */}
     </div>

@@ -7,7 +7,13 @@
 //Main
 html {
   font-size: $BASE_FONT_SIZE;
+  background: url("https://images.unsplash.com/photo-1531904895138-ac676f9f125a?ixlib=rb-1.2.1&auto=format&fit=crop&w=976&q=80") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 body {
   background-color: $grey;
@@ -15,23 +21,24 @@ body {
 }
 
 .App {
-  background: rgba(92,129,202,1);
-  background: 
-    -moz-linear-gradient(
-      left, 
-      rgba(92,129,202,1) 0%, 
-      rgb(112, 249, 142) 100%
-  );
-  background:
-    -webkit-linear-gradient(
-        left, 
-        rgba(92,129,202,1) 0%, 
-        rgba(112, 249, 142, 1) 100%
-        );
+//   background: rgba(92,129,202,1);
+//   background: 
+//     -moz-linear-gradient(
+//       left, 
+//       rgba(92,129,202,1) 0%, 
+//       rgb(112, 249, 142) 100%
+//   );
+//   background:
+//     -webkit-linear-gradient(
+//         left, 
+//         rgba(92,129,202,1) 0%, 
+//         rgba(112, 249, 142, 1) 100%
+//         );
 
-  @include for-phone-only {    
-    background-color: #282c34;
- }
+//   @include for-phone-only {    
+//     background-color: #282c34;
+//  }
+
 }
 
 #root {
@@ -73,6 +80,8 @@ h3 {
 .one-line-spread {
   display: flex;
 }
+
+//Pictures 
 
 //Sections
 .single-accordion-section {
