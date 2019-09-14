@@ -30,6 +30,7 @@
     "node-sass": "^4.12.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-move": "^6.0.0",
+    "react-sweet-progress": "^1.1.2",
     "react-vis": "^1.11.7"
   }
 }

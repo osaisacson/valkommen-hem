@@ -95,25 +95,11 @@ class Active extends React.Component {
 
   render() {
       return (
-          <div>
-            <SectionHeader firstHeader="Active" secondHeader="Top 5 with 10,000 votes" />
-
-            {this.state.list.map(item => (
-            <div key={item.id} className="single-accordion-section">
-                <Voting />
-                <div className="progress-and-accordion-section">
-                    <Progress level={item.progressLevel} />
-                    <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger={item.mainTrigger}>
-                        <p>{item.mainDescription}</p>
-                        <Collapsible trigger={item.secondTrigger} open={true}>
-                            <p>{item.secondDescription}</p>
-                            <Collapsible trigger={item.thirdTrigger}><p>{item.thirdDescription}</p></Collapsible>
-                            <Collapsible trigger={item.fourthTrigger}><p>{item.fourthDescription}</p></Collapsible>
-                        </Collapsible>
-                    </Collapsible>
-                </div>
-            </div>
-            ))}
+          <div className="progress-and-accordion-section">
+            <Progress level={item.progressLevel} />
+            <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger={item.mainTrigger}>
+                <p>{item.mainDescription}</p>
+            </Collapsible>
           </div>
       )
   }

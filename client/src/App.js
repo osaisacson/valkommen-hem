@@ -7,10 +7,11 @@ import {XYPlot, LineSeries} from 'react-vis';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import TabContainer from 'react-bootstrap/TabContainer';
+import Collapsible from './components/Collapsible.js';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
-import Active from './components/Active';
-
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 
 function App() {
   const [user, setUser] = React.useState(null)
@@ -45,22 +46,40 @@ function App() {
         {/* <img src={'https://rebellion.earth/wp/wp-content/themes/xr/images/xr-logo-no-symbol.svg'} className="logo" alt="logo" /> */}
       </header>
 
+      
+
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
-        Översikt av husnummer
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='H20'>
+          <p>Aktuell vattenreserv: 55,000 liter</p>
+      </Collapsible>
+      <Progress percent={75} />
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Närsalter'>
+          <p>Nästan allt på topp!</p>
+      </Collapsible>
+      <Progress percent={88} status="error" theme={{
+        error: {
+          color: '#fbc630'
+        }
+      }} />
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Odling'>
+          <p>Ny gröda tillgänglig!</p>
+      </Collapsible>
+      <Progress percent={100} status="success" />
       </Tab>
       <Tab eventKey="harvest" title="Dagens Skörd">
         Skörden enna
       </Tab>
-      <Tab eventKey="water" title="Vatten">
+      <Tab eventKey="water" title="System">
         <h3>Vatten Regenerering i år. <p>- 122,543 liter denna månaden</p></h3>
       <XYPlot height={300} width={400}>
         <LineSeries data={data} />
       </XYPlot>
       </Tab>
+      <Tab eventKey="neighbours" title="Grannar">
+        <p>Alla mina grannar</p>
+      </Tab>
     </Tabs>
-
-      {/* <Active /> */}
     </div>
   );
 }
