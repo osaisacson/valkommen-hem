@@ -8,9 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Collapsible from './components/Collapsible.js';
-import ProgressBar from 'react-bootstrap/ProgressBar';
+// import ProgressBar from 'react-bootstrap/ProgressBar';
+import Button from 'react-bootstrap/Button';
 
-import { Progress } from 'react-sweet-progress';
+// import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
 
       </Collapsible>
       {/* vattenillustration */}
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näringslösning - 44,000 liter'>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näringslösning - 44 000 liter'>
           <p>Förra mån: 23 370 liter</p>
           <p>Denna mån: 13 453 liter</p>
           <p>Detta året: 44, 000 liter</p>
@@ -79,6 +80,11 @@ function App() {
           color: '#fbc630'
         }
       }} /> */}
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Energi - 55 000 kWh'>
+          <p>Förra mån: 5121 kWh</p>
+          <p>Denna mån: 3251 kWh</p>
+          <p>Detta året: 55 000 kWh</p>
+      </Collapsible>
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Odling - (1 ny)'>
           <p>Tomater</p>
           <p>Pak choi</p>
@@ -90,17 +96,53 @@ function App() {
       </Collapsible>
       {/* <Progress percent={100} status="success" /> */}
       </Tab>
-      <Tab eventKey="harvest" title="Dagens Skörd">
-        Skörden enna. Bilder och actions.
+      <Tab eventKey="harvest" title="Skörd">
+        <div className="one-line-column">
+          <div>Pak Choi</div>
+          <div><Button>BOKA</Button></div>
+        </div>
+        <div className="one-line-column">
+          <div>Basilika</div>
+          <div><Button>BOKA</Button></div>
+        </div>
+        <div className="one-line-column">
+           <div>Micros</div>
+          <div><Button>BOKA</Button></div>
+        </div>
+        <div className="one-line-column">
+          <div>Oregano</div>
+          <div><Button>BOKA</Button></div>
+        </div>
       </Tab>
-      <Tab eventKey="water" title="System">
-        <p>Kombinerade nummer produktion eller sparade utgifter.</p>
-      <XYPlot height={300} width={400}>
+      <Tab eventKey="water" title="Välj">
+        <p>Frågor under omröstning:</p>
+        <h3>Föreslagna nya grödor</h3>
+        <p>this</p>
+        <p>that</p>
+        <Button>VÄLJ</Button>
+        <h3>Nya elcyklar?</h3>
+        <p>ja</p>
+        <p>naj</p>
+        <Button>VÄLJ</Button>
+        {/* <XYPlot height={300} width={400}>
         <LineSeries data={data} />
-      </XYPlot>
+      </XYPlot> */}
       </Tab>
       <Tab eventKey="neighbours" title="Grannar">
         <p>Alla mina grannar</p>
+
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Låna socker'>
+          <p>lista av folk som vill låna socker</p>
+      </Collapsible>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Byta tjänster'>
+          <p>lista av folk som vill ha barnvakt</p>
+      </Collapsible>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Aktiviteter'>
+          <p>Jag vill ha fest</p>
+      </Collapsible>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Transport'>
+          <p>Jag vill ha bil</p>
+      </Collapsible>
       </Tab>
     </Tabs>
     </div>

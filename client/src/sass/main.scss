@@ -98,10 +98,18 @@ a {
   align-items: center;
 }
 
+.one-line-column {
+  @extend .one-line-spread;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+
 //Sections
 .header-title {
-  padding: 20
+  padding: 20px 0;
 }
+
 .single-accordion-section {
   @extend .one-line-spread;
   margin-bottom: 15px;
