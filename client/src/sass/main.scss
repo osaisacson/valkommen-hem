@@ -56,6 +56,7 @@ h3,
 h4 {
   font-family: 'Libre Franklin', sans-serif;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 h1, 
@@ -64,14 +65,15 @@ h2 {
 }
 
 h1 {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 h3 {
   background-color: #000;
   color: #fff;
-  padding: 5px 5px 5px 30px;
-  margin-right: 5px;
+  padding: 5px;
+  margin-top: 15px !important;
+  font-size: 12px !important;
 }
 
 
@@ -91,15 +93,15 @@ a {
 }
 
 //Helpers
-
 .one-line-spread {
   display: flex;
   align-items: center;
 }
 
-//Pictures 
-
 //Sections
+.header-title {
+  padding: 20
+}
 .single-accordion-section {
   @extend .one-line-spread;
   margin-bottom: 15px;
@@ -112,7 +114,7 @@ a {
 }
 
 .text-section {
-  padding: 0 10px;
+  padding: 20px 0;
 }
 
 .progress-and-accordion-section {

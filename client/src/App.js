@@ -42,38 +42,59 @@ function App() {
     <div className="App">
       <header className="one-line-spread">
         <img src={'/logo.png'} className="logo" alt="logo" />
-        <div>
+        <div className="header-title">
           <h2>Välkommen hem till</h2>
           <h1>Resilienshus Floda</h1>
         </div>
       </header>
 
-      
 
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='H20'>
-          <p>Aktuell vattenreserv: 55,000 liter</p>
+      <h3>Aktuell produktion</h3>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='H20 - 1,472,350 liter'>
+          <p>Förra mån: 13 370 liter</p>
+          <p>Denna mån: 13 370 liter</p>
+          <p>Detta året: 1 422 230 liter</p>
+
       </Collapsible>
-      <Progress percent={75} />
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Närsalter'>
-          <p>Nästan allt på topp!</p>
+      {/* vattenillustration */}
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näringslösning - 44,000 liter'>
+          <p>Förra mån: 23 370 liter</p>
+          <p>Denna mån: 13 453 liter</p>
+          <p>Detta året: 44, 000 liter</p>
       </Collapsible>
-      <Progress percent={88} status="error" theme={{
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Jordförbättring - 145 kg'>
+          <p>Förra mån: 29 kg</p>
+          <p>Denna mån: 35 kg</p>
+          <p>Detta året: 145 kg</p>
+      </Collapsible>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Fisk - 3245 kg'>
+          <p>Förra mån: 212 kg</p>
+          <p>Denna mån: 125 kg</p>
+          <p>Detta året: 3245 kg</p>
+      </Collapsible>
+      {/* <Progress percent={88} status="error" theme={{
         error: {
           color: '#fbc630'
         }
-      }} />
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Odling'>
-          <p>Ny gröda tillgänglig!</p>
+      }} /> */}
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Odling - (1 ny)'>
+          <p>Tomater</p>
+          <p>Pak choi</p>
+          <p>Micros</p>
+          <p>Kål</p>
+          <p>Oregano</p>
+          <p>Basilika</p>
+          <p>Timjan (ny!) - beräknad skörd: 8 dagar</p>
       </Collapsible>
-      <Progress percent={100} status="success" />
+      {/* <Progress percent={100} status="success" /> */}
       </Tab>
       <Tab eventKey="harvest" title="Dagens Skörd">
-        Skörden enna
+        Skörden enna. Bilder och actions.
       </Tab>
       <Tab eventKey="water" title="System">
-        <h3>Vatten Regenerering i år. <p>- 122,543 liter denna månaden</p></h3>
+        <p>Kombinerade nummer produktion eller sparade utgifter.</p>
       <XYPlot height={300} width={400}>
         <LineSeries data={data} />
       </XYPlot>
