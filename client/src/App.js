@@ -10,6 +10,8 @@ import Tab from 'react-bootstrap/Tab';
 import Collapsible from './components/Collapsible.js';
 // import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
 
 // import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
@@ -97,24 +99,43 @@ function App() {
       {/* <Progress percent={100} status="success" /> */}
       </Tab>
       <Tab eventKey="harvest" title="Skörd">
-        <div className="one-line-column">
-          <div>Pak Choi</div>
-          <div><Button>BOKA</Button></div>
-        </div>
-        <div className="one-line-column">
-          <div>Basilika</div>
-          <div><Button>BOKA</Button></div>
-        </div>
-        <div className="one-line-column">
-           <div>Micros</div>
-          <div><Button>BOKA</Button></div>
-        </div>
-        <div className="one-line-column">
-          <div>Oregano</div>
-          <div><Button>BOKA</Button></div>
-        </div>
+      <CardColumns>
+  <Card>
+    <Card.Img src="https://images.unsplash.com/photo-1508595165502-3e2652e5a405?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" />
+    <Card.ImgOverlay>
+      <Card.Title>Basilika</Card.Title>
+      <Card.Text>Extra söt denna veckan!</Card.Text>
+      <Button variant="primary">Boka</Button>
+      </Card.ImgOverlay>
+  </Card>
+
+  <Card>
+    <Card.Img src="https://images.unsplash.com/photo-1508061461508-cb18c242f556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" />
+    <Card.ImgOverlay>
+      <Card.Title>Pak Choi</Card.Title>
+      <Card.Text>Stek upp med veckans vårlök</Card.Text>
+      <Button variant="primary">Boka</Button>
+      </Card.ImgOverlay>
+  </Card>
+
+  <Card>
+    <Card.Img src="https://images.unsplash.com/photo-1528796940112-4979b4a98424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Card image" />
+    <Card.ImgOverlay>
+      <Card.Title>Koriander</Card.Title>
+      <Button variant="primary">Boka</Button>
+      </Card.ImgOverlay>
+  </Card>
+  <Card bg="primary" text="white" className="text-center p-3">
+    <blockquote className="blockquote mb-0 card-body">
+      <p>Än så länge har du ätit 56kg hemodlat i år, och genom det minskat ditt c02 avtryck med <strong>25kg</strong>.</p>
+    </blockquote>
+  </Card>
+</CardColumns>
+
+     
       </Tab>
       <Tab eventKey="water" title="Välj">
+      <div className="one-line-column">
         <p>Frågor under omröstning:</p>
         <h3>Föreslagna nya grödor</h3>
         <p>this</p>
@@ -127,6 +148,7 @@ function App() {
         {/* <XYPlot height={300} width={400}>
         <LineSeries data={data} />
       </XYPlot> */}
+      </div>
       </Tab>
       <Tab eventKey="neighbours" title="Grannar">
         <p>Alla mina grannar</p>
