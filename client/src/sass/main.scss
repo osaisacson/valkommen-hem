@@ -74,15 +74,27 @@ h3 {
   margin-right: 5px;
 }
 
+
+//Overrides
 a {
-  color: #666;
+  color: #666 !important;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
 }
 
+.react-sweet-progress {
+  padding-right: 5px;
+}
+
+.react-sweet-progress-line-inner {
+  border-radius: 0 !important;
+}
 
 //Helpers
 
 .one-line-spread {
   display: flex;
+  align-items: center;
 }
 
 //Pictures 

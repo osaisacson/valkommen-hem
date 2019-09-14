@@ -40,10 +40,12 @@ function App() {
 
   return user && (
     <div className="App">
-      <header>
-        <h2>Välkommen hem till</h2>
-        <h1>Resilienshus Floda</h1>
-        {/* <img src={'https://rebellion.earth/wp/wp-content/themes/xr/images/xr-logo-no-symbol.svg'} className="logo" alt="logo" /> */}
+      <header className="one-line-spread">
+        <img src={'/logo.png'} className="logo" alt="logo" />
+        <div>
+          <h2>Välkommen hem till</h2>
+          <h1>Resilienshus Floda</h1>
+        </div>
       </header>
 
       
