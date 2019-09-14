@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,600,900&display=swap);
+@import "base/reset";
+@import "base/clearfix";
+@import "base/variables";
+@import "base/mixins";
+
+//Main
+html {
+  font-size: $BASE_FONT_SIZE;
+}
+
+body {
+  background-color: $grey;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  background: rgba(92,129,202,1);
+  background: 
+    -moz-linear-gradient(
+      left, 
+      rgba(92,129,202,1) 0%, 
+      rgba(249,140,112,1) 100%
+  );
+  background:
+    -webkit-linear-gradient(
+        left, 
+        rgba(92,129,202,1) 0%, 
+        rgba(249,140,112,1) 100%
+  );
+
+  @include for-phone-only {    
+    background-color: #282c34;
+ }
+}
+
+#root {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+//Text
+
+h1, 
+h2,
+h3,
+h4 {
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+}
+
+h1, 
+h2 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 5px 5px 30px;
+  margin-right: 5px;
+}
+
+
+//Helpers
+
+.one-line-spread {
+  display: flex;
+}
+
+//Sections
+.single-accordion-section {
+  @extend .one-line-spread;
+  margin-bottom: 15px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px;
+}
+
+.text-section {
+  padding: 0 10px;
+}
+
+.progress-and-accordion-section {
+  width: 100%;
+}
+
+
+//Items
+.logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+
+//COMPONENTS
+
+//Voting
+.voting {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  background-color: $collapsibleBackground;
+}
+
+.countUp, 
+.countDown {
+  font-family: 'FontAwesome';
+  background-color: transparent;
+}
+
+.countUp {
+  content: '\f0d8';
+  padding: 10px 20px 30px 20px;;
+}
+
+.countDown {
+  content: '\f0d7';
+  padding: 30px 20px 10px 20px;;
+}
+
+//Progress
+.progress-section {
+  display: flex;
+}
+
+.progress {
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 10px;
+  width: fit-content;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  margin-right: 3px;
+}
+
+.take-action {
+  background-color: red;
+  color: black;
+  font-weight: 400;
+}
+
+@import "components/Collapsible";
