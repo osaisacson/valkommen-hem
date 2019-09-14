@@ -2,21 +2,36 @@ import React from 'react';
 import './sass/main.scss';
 import axios from 'axios';
 
+import '../../node_modules/react-vis/dist/style.css';
+import {XYPlot, LineSeries} from 'react-vis';
+
 import Active from './components/Active';
-import Discussed from './components/Discussed';
-import Suggested from './components/Suggested';
 
 
 function App() {
   const [user, setUser] = React.useState(null)
 
   React.useEffect(() => {
-    axios.get('/api?user=osaisacson') //sets query for which user data to get
+    // axios.get('/api?user=osaisacson') //sets query for which user data to get
+    axios.get('/api')
     .then(response => {
       setUser(response.data)
     })
 
   }, [])
+
+  const data = [
+    {x: 0, y: 8},
+    {x: 1, y: 5},
+    {x: 2, y: 4},
+    {x: 3, y: 9},
+    {x: 4, y: 1},
+    {x: 5, y: 7},
+    {x: 6, y: 6},
+    {x: 7, y: 3},
+    {x: 8, y: 2},
+    {x: 9, y: 0}
+  ];
 
   return user && (
     <div className="App">
@@ -26,14 +41,20 @@ function App() {
         {/* <img src={'https://rebellion.earth/wp/wp-content/themes/xr/images/xr-logo-no-symbol.svg'} className="logo" alt="logo" /> */}
       </header>
 
-      <Active />
-      <Discussed />
-      <Suggested />
+      <XYPlot height={300} width={300}>
+        <LineSeries data={data} />
+      </XYPlot>
+
+      {/* <Active /> */}
     </div>
   );
 }
 
 export default App;
+
+
+
+
 
 //Full data {JSON.stringify(user)}
 

@@ -20,14 +20,14 @@ body {
     -moz-linear-gradient(
       left, 
       rgba(92,129,202,1) 0%, 
-      rgba(249,140,112,1) 100%
+      rgb(112, 249, 142) 100%
   );
   background:
     -webkit-linear-gradient(
         left, 
         rgba(92,129,202,1) 0%, 
-        rgba(249,140,112,1) 100%
-  );
+        rgba(112, 249, 142, 1) 100%
+        );
 
   @include for-phone-only {    
     background-color: #282c34;
