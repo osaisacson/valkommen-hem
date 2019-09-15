@@ -57,7 +57,6 @@ function App() {
   ];
 
   const [show, setShow] = React.useState(true);
-  const [show, setShow2] = React.useState(true);
 
   return user && (
     <div className="App">
@@ -216,13 +215,13 @@ function App() {
         <p>Om alla i huset inte åker bil en dag i veckan skulle vi dra ner vårt gemensamma c02 med 145kg/år.</p>
         <hr />
         <div className="d-flex justify-content-end">
-          <Button onClick={() => setShow2(false)} variant="outline-success">
+          <Button onClick={() => setShow(false)} variant="outline-success">
             Ja, jag är med. Ingen bil på tisdagar!
           </Button>
         </div>
       </Alert>
 
-      {!show && <Button onClick={() => setShow2(true)}>Du har tyckt till och sagt du skippar bilen på tisdagar, klicka här om du vill ändra dig</Button>}
+      {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du skippar bilen på tisdagar, klicka här om du vill ändra dig</Button>}
       </Tab>
       <Tab eventKey="neighbours" title="Grannar">
         <p>Alla mina grannar</p>
