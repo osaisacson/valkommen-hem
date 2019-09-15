@@ -227,17 +227,16 @@ function App() {
         <p>Alla mina grannar</p>
 
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Låna socker'>
-          <p>lista av folk som vill låna socker</p>
+          <p>folk som vill låna socker</p>
       </Collapsible>
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Byta tjänster'>
-          <p>lista av folk som vill ha barnvakt</p>
+          <p>folk som vill ha barnvakt</p>
       </Collapsible>
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Aktiviteter'>
           <p>Jag vill ha fest</p>
       </Collapsible>
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Transport'>
         <img src={bilpool} className="logos" alt="logo" />
-        <p>Förra mån: 1200 kg</p>
       </Collapsible>
       </Tab>
     </Tabs>
