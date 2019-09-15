@@ -64,10 +64,6 @@ h2 {
   font-weight: 800;
 }
 
-h1 {
-  font-size: 16px !important;
-}
-
 h3 {
   background-color: #000;
   color: #fff;
@@ -129,6 +125,17 @@ a {
 //Sections
 .header-title {
   padding: 20px 0;
+
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 13px;
+  }
+
+  h2 {
+    font-size: 15px;
+    text-transform: inherit;
+  }
 }
 
 .single-accordion-section {
@@ -150,6 +157,29 @@ a {
   width: 100%;
 }
 
+.stats-and-icon {
+  @extend .one-line-spread;
+  justify-content: space-around;
+}
+
+.header-and-badge {
+  display: flex;
+  width: fit-content;
+  background-color: #000;
+  color: #fff;
+  height: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: 'Libre Franklin', sans-serif;
+  align-items: center;
+  padding: 15px 10px;
+  margin-bottom: 30px;
+  border-radius: 0 15px 15px 0;
+
+  div {
+    margin-right: 10px;
+  }
+}
 
 //Items
 .logo {
@@ -157,6 +187,9 @@ a {
   pointer-events: none;
 }
 
+.logos {
+  width: 60px;
+}
 
 //COMPONENTS
 

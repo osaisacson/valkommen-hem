@@ -12,6 +12,21 @@ import Collapsible from './components/Collapsible.js';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import Badge from 'react-bootstrap/Badge';
+import Alert from 'react-bootstrap/Alert';
+import Image from 'react-bootstrap/Image';
+
+import bilpool from './bilpool.png'; 
+import fisk from './fisk.png'; 
+import jord from './jord.png'; 
+import lanabyta from './lana-byta.png'; 
+import naringslosning from './naringslosning.png'; 
+import odling from './odling.png'; 
+import odlingslampor from './odlingslampor.png'; 
+import regn from './regn.png'; 
+import solel from './solel.png'; 
+import vatten from './vatten.png'; 
+
 
 // import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
@@ -41,6 +56,8 @@ function App() {
     {x: 9, y: 8}
   ];
 
+  const [show, setShow] = React.useState(true);
+
   return user && (
     <div className="App">
       <header className="one-line-spread">
@@ -51,53 +68,93 @@ function App() {
         </div>
       </header>
 
+      <div className="header-and-badge">
+        <div>Uppdateringar </div> 
+        <Badge variant="danger">5</Badge>
+      </div>
 
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
       <h3>Aktuell produktion</h3>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='H20 - 1,472,350 liter'>
-          <p>Förra mån: 13 370 liter</p>
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Vattenåtervinning - 1 422 230 liter'>
+      <div className="stats-and-icon">
+          <img src={vatten} className="logos" alt="logo" />
+          <div>
+          <p>Förra mån: 122 542 liter</p>
           <p>Denna mån: 13 370 liter</p>
           <p>Detta året: 1 422 230 liter</p>
+          </div>
+        </div>
+      </Collapsible>
 
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Regnvatten - 340 562 liter'>
+        <div className="stats-and-icon">
+          <img src={regn} className="logos" alt="logo" />
+            <div>
+            <p>Förra mån: 56 340 liter</p>
+            <p>Denna mån: 9453 liter</p>
+            <p>Detta året: 340 562 liter</p>
+            </div>
+        </div>
       </Collapsible>
-      {/* vattenillustration */}
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näringslösning - 44 000 liter'>
-          <p>Förra mån: 23 370 liter</p>
-          <p>Denna mån: 13 453 liter</p>
-          <p>Detta året: 44, 000 liter</p>
-      </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Jordförbättring - 145 kg'>
-          <p>Förra mån: 29 kg</p>
-          <p>Denna mån: 35 kg</p>
-          <p>Detta året: 145 kg</p>
-      </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Fisk - 3245 kg'>
-          <p>Förra mån: 212 kg</p>
-          <p>Denna mån: 125 kg</p>
-          <p>Detta året: 3245 kg</p>
-      </Collapsible>
-      {/* <Progress percent={88} status="error" theme={{
-        error: {
-          color: '#fbc630'
-        }
-      }} /> */}
+
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Energi - 55 000 kWh'>
+      <div className="stats-and-icon">
+          <img src={solel} className="logos" alt="logo" />
+          <div>
           <p>Förra mån: 5121 kWh</p>
           <p>Denna mån: 3251 kWh</p>
           <p>Detta året: 55 000 kWh</p>
+          </div>
+        </div>
       </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Odling - (1 ny)'>
-          <p>Tomater</p>
-          <p>Pak choi</p>
-          <p>Micros</p>
-          <p>Kål</p>
-          <p>Oregano</p>
-          <p>Basilika</p>
-          <p>Timjan (ny!) - beräknad skörd: 8 dagar</p>
+
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näring - 44 203 liter'>
+      <div className="stats-and-icon">
+          <img src={naringslosning} className="logos" alt="logo" />
+          <div>
+          <p>Förra mån: 23 370 liter</p>
+          <p>Denna mån: 13 453 liter</p>
+          <p>Detta året: 44, 000 liter</p>
+          </div>
+        </div>
       </Collapsible>
-      {/* <Progress percent={100} status="success" /> */}
+
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Jord - 145 kg'>
+      <div className="stats-and-icon">
+          <img src={jord} className="logos" alt="logo" />
+          <div>
+          <p>Förra mån: 41 kg</p>
+          <p>Denna mån: 23 kg</p>
+          <p>Detta året: 145 kg</p>
+          </div>
+        </div>
+      </Collapsible>
+
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Bladgrönt - 4210 kg'>
+      <div className="stats-and-icon">
+          <img src={odling} className="logos" alt="logo" />
+          <div>
+          <p>Förra mån: 1200 kg</p>
+          <p>Denna mån: 842 kg</p>
+          <p>Detta året: 4210 kg</p>
+          </div>
+        </div>
+      </Collapsible>
+
+      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Fisk - 145 kg'>
+      <div className="stats-and-icon">
+          <img src={fisk} className="logos" alt="logo" />
+          <div>
+          <p>Förra mån: 41 kg</p>
+          <p>Denna mån: 23 kg</p>
+          <p>Detta året: 145 kg</p>
+          </div>
+        </div>
+      </Collapsible>
+    
       </Tab>
+      
       <Tab eventKey="harvest" title="Skörd">
       <CardColumns>
   <Card>
@@ -135,20 +192,36 @@ function App() {
      
       </Tab>
       <Tab eventKey="water" title="Välj">
-      <div className="one-line-column">
-        <p>Frågor under omröstning:</p>
-        <h3>Föreslagna nya grödor</h3>
-        <p>this</p>
-        <p>that</p>
-        <Button>VÄLJ</Button>
-        <h3>Nya elcyklar?</h3>
-        <p>ja</p>
-        <p>naj</p>
-        <Button>VÄLJ</Button>
-        {/* <XYPlot height={300} width={400}>
-        <LineSeries data={data} />
-      </XYPlot> */}
-      </div>
+
+      <Alert show={show} variant="success">
+        <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
+        <Image src="https://images.unsplash.com/photo-1536630596251-b12ba0d9f7d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Card image" fluid />
+        <p>
+        Microblad är en relativt ny företeelse i Sverige - det är plantor som skördas när det första paret med riktiga blad syns. De har ett väldigt högt näringsvärde med studier som visat att dessa plantor trots sin ringa storlek har ett 4-40 gånger högre näringsinnehåll än den färdigvuxna salladen (beroende på näringsämne).
+        </p>
+        <hr />
+        <div className="d-flex justify-content-end">
+          <Button onClick={() => setShow(false)} variant="outline-success">
+            Ja, jag tycker vi ska odla mikrogreens!
+          </Button>
+        </div>
+      </Alert>
+
+      {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du vill vi ska odla mikroblad, klicka här om du vill ändra dig</Button>}
+
+      <Alert show={show} variant="success">
+        <Alert.Heading>Föreslagen ny aktivitet: Bilfri tisdag!</Alert.Heading>
+        <Image src="https://images.unsplash.com/photo-1533650936805-912836eda0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" fluid />
+        <p>Om alla i huset inte åker bil en dag i veckan skulle vi dra ner vårt gemensamma c02 med 145kg/år.</p>
+        <hr />
+        <div className="d-flex justify-content-end">
+          <Button onClick={() => setShow(false)} variant="outline-success">
+            Ja, jag är med. Ingen bil på tisdagar!
+          </Button>
+        </div>
+      </Alert>
+
+      {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du skippar bilen på tisdagar, klicka här om du vill ändra dig</Button>}
       </Tab>
       <Tab eventKey="neighbours" title="Grannar">
         <p>Alla mina grannar</p>
@@ -163,7 +236,8 @@ function App() {
           <p>Jag vill ha fest</p>
       </Collapsible>
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Transport'>
-          <p>Jag vill ha bil</p>
+        <img src={bilpool} className="logos" alt="logo" />
+        <p>Förra mån: 1200 kg</p>
       </Collapsible>
       </Tab>
     </Tabs>
@@ -200,7 +274,13 @@ export default App;
 
 
 
-
+{/* <Progress percent={88} status="error" theme={{
+        error: {
+          color: '#fbc630'
+        }
+      }} /> */}
+     
+      {/* <Progress percent={100} status="success" /> */}
 
 
 //https://www.npmjs.com/package/react-collapsible
