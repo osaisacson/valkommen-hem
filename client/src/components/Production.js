@@ -193,7 +193,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Fisk</div>
               <div className="accordion-custom-countup">
-                <CountUp start={3170} end={3240} duration={2000} separator=" " redraw/>
+                <CountUp start={0} end={3240} duration={3} separator=" " redraw/>
                 <span className="accordion-custom-title"> kg</span></div>
             </div>
             <Icon name='dropdown' />
@@ -206,13 +206,13 @@ export default class Production extends Component {
           thisMonthStart='0'
           thisMonthEnd='380'
           thisMonthDuration='3'
-          thisYearStart='3170'
+          thisYearStart='0'
           thisYearEnd='3240'
-          thisYearDuration='2000'
+          thisYearDuration='3'
           quoteBefore='Vilket motsvarar ett värde av '
-          quoteStart='650000'
+          quoteStart='0'
           quoteEnd='675000'
-          quoteDuration='2000'
+          quoteDuration='3'
           quoteUnit='kr'
         />
         </Accordion.Content>
