@@ -31,6 +31,7 @@
     "node-sass": "^4.12.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-countup": "^4.2.2",
+    "react-flipcard": "^0.2.1",
     "react-move": "^6.0.0",
     "react-sweet-progress": "^1.1.2",
     "react-vis": "^1.11.7",

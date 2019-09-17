@@ -3,32 +3,23 @@ import './sass/main.scss';
 import axios from 'axios';
 
 import '../../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineSeries} from 'react-vis';
+// import {XYPlot, LineSeries} from 'react-vis';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Collapsible from './components/Collapsible.js';
-import AccordionCustom from './components/AccordionCustom';
+
+import Harvest from './components/Harvest';
+import Production from './components/Production';
 
 // import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
 import Badge from 'react-bootstrap/Badge';
 import Alert from 'react-bootstrap/Alert';
 import Image from 'react-bootstrap/Image';
 
 import bilpool from './bilpool.png'; 
-import fisk from './fisk.png'; 
-import jord from './jord.png'; 
 import lanabyta from './lana-byta.png'; 
-import naringslosning from './naringslosning.png'; 
-import odling from './odling.png'; 
-import odlingslampor from './odlingslampor.png'; 
-import regn from './regn.png'; 
-import solel from './solel.png'; 
-import vatten from './vatten.png'; 
-
 
 // import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
@@ -45,18 +36,18 @@ function App() {
 
   }, [])
 
-  const data = [
-    {x: 0, y: 6},
-    {x: 1, y: 7},
-    {x: 2, y: 6},
-    {x: 3, y: 7},
-    {x: 4, y: 8},
-    {x: 5, y: 7},
-    {x: 6, y: 7},
-    {x: 7, y: 8},
-    {x: 8, y: 9},
-    {x: 9, y: 8}
-  ];
+  // const data = [
+  //   {x: 0, y: 6},
+  //   {x: 1, y: 7},
+  //   {x: 2, y: 6},
+  //   {x: 3, y: 7},
+  //   {x: 4, y: 8},
+  //   {x: 5, y: 7},
+  //   {x: 6, y: 7},
+  //   {x: 7, y: 8},
+  //   {x: 8, y: 9},
+  //   {x: 9, y: 8}
+  // ];
 
   const [show, setShow] = React.useState(true);
 
@@ -77,44 +68,11 @@ function App() {
 
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
-        <AccordionCustom />    
+        <Production />    
       </Tab>
       
       <Tab eventKey="harvest" title="Skörd">
-      <CardColumns>
-  <Card>
-    <Card.Img src="https://images.unsplash.com/photo-1508595165502-3e2652e5a405?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" />
-    <Card.ImgOverlay>
-      <Card.Title>Basilika</Card.Title>
-      <Card.Text>Extra söt denna veckan!</Card.Text>
-      <Button variant="primary">Boka</Button>
-      </Card.ImgOverlay>
-  </Card>
-
-  <Card>
-    <Card.Img src="https://images.unsplash.com/photo-1508061461508-cb18c242f556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" />
-    <Card.ImgOverlay>
-      <Card.Title>Pak Choi</Card.Title>
-      <Card.Text>Stek upp med veckans vårlök</Card.Text>
-      <Button variant="primary">Boka</Button>
-      </Card.ImgOverlay>
-  </Card>
-
-  <Card>
-    <Card.Img src="https://images.unsplash.com/photo-1528796940112-4979b4a98424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Card image" />
-    <Card.ImgOverlay>
-      <Card.Title>Koriander</Card.Title>
-      <Button variant="primary">Boka</Button>
-      </Card.ImgOverlay>
-  </Card>
-  <Card bg="primary" text="white" className="text-center p-3">
-    <blockquote className="blockquote mb-0 card-body">
-      <p>Än så länge har du ätit 56kg hemodlat i år, och genom det minskat ditt c02 avtryck med <strong>25kg</strong>.</p>
-    </blockquote>
-  </Card>
-</CardColumns>
-
-     
+        <Harvest />
       </Tab>
       <Tab eventKey="water" title="Välj">
 
