@@ -170,7 +170,7 @@ export default class AccordionCustom extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Fisk</div>
               <div className="accordion-custom-countup">
-                <CountUp end={145} duration={4} separator=" " redraw/>
+                <CountUp start={142} end={145} duration={2000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kg</span></div>
             </div>
             <Icon name='dropdown' />
@@ -179,7 +179,7 @@ export default class AccordionCustom extends Component {
         <Accordion.Content active={activeIndex === 3}>
           <p>Förra mån: 41 kg</p>
           <p>Denna mån: 23 kg</p>
-          <p>Detta året: 145 kg</p>
+          <p>Detta året: <CountUp start={142} end={145} duration={2000} separator=" " redraw/> kg</p>
         </Accordion.Content>
 
         <Accordion.Title
@@ -259,7 +259,7 @@ export default class AccordionCustom extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Energi</div>
               <div className="accordion-custom-countup">
-                <CountUp end={55000} duration={4} separator=" " redraw/>
+                <CountUp start={120210} end={124000} delay={1} duration={16000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kWh</span></div>
             </div>
             <Icon name='dropdown' />
@@ -268,7 +268,7 @@ export default class AccordionCustom extends Component {
         <Accordion.Content active={activeIndex === 6}>
           <p>Förra mån: 5121 kWh</p>
           <p>Denna mån: 3251 kWh</p>
-          <p>Detta året: 55 000 kWh</p>
+          <p>Detta året: <CountUp start={120210} end={124000} delay={1} duration={16000} separator=" " redraw/> kWh</p>
         </Accordion.Content>
 
         <Accordion.Title
@@ -281,7 +281,7 @@ export default class AccordionCustom extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Sollampor</div>
               <div className="accordion-custom-countup">
-                <CountUp end={122000} duration={4} separator=" " redraw/>
+                <CountUp start={121500} end={122000} delay={1} duration={4000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kWh</span></div>
             </div>
             <Icon name='dropdown' />
@@ -290,8 +290,8 @@ export default class AccordionCustom extends Component {
         <Accordion.Content active={activeIndex === 8}>
           (att uppdateras)
           <p>Förra mån: 5121 kWh</p>
-          <p>Denna mån: 3251 kWh</p>
-          <p>Detta året: 55 000 kWh</p>
+          <p>Denna mån: <CountUp start={3251} end={4182} delay={1} duration={19000} separator=" " redraw/> kWh</p>
+          <p>Detta året: <CountUp start={121500} end={122000} delay={1} duration={4000} separator=" " redraw/> kWh</p>
         </Accordion.Content>
       </Accordion>
     )
