@@ -107,8 +107,6 @@ function App() {
       {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du skippar bilen på tisdagar, klicka här om du vill ändra dig</Button>}
       </Tab>
       <Tab eventKey="neighbours" title="Grannar">
-        <p>Alla mina grannar</p>
-
       <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Låna socker'>
           <p>folk som vill låna socker</p>
       </Collapsible>

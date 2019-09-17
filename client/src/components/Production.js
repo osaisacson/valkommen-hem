@@ -316,7 +316,7 @@ export default class Production extends Component {
           quoteEnd='6731'
           quoteDuration='3'
           quoteUnit='kg'
-          quoteAfter=' råmaterial.'
+          quoteAfter=' råmaterial'
         />
         </Accordion.Content>
 
@@ -350,7 +350,7 @@ export default class Production extends Component {
           quoteStart='0'
           quoteEnd='123'
           quoteDuration='3'
-          quoteAfter=' elbilar dagligen i ett år.'
+          quoteAfter=' elbilar dagligen i ett år'
         />
         </Accordion.Content>
 
@@ -384,7 +384,7 @@ export default class Production extends Component {
           quoteStart='1234'
           quoteEnd='2245'
           quoteDuration='2000'
-          quoteAfter=' lampor konstant tända i ett år.'
+          quoteAfter=' lampor konstant tända i ett år'
         />
         </Accordion.Content>
 
@@ -420,7 +420,7 @@ export default class Production extends Component {
           quoteEnd='43'
           quoteDuration='3'
           quoteUnit='%'
-          quoteAfter=' är täck av vår egen elproduktion.'
+          quoteAfter=' är täckt av vår egen elproduktion'
         />
         </Accordion.Content>
       </Accordion>
