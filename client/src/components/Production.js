@@ -143,7 +143,7 @@ export default class Production extends Component {
           quoteBefore='Vilket betyder att vi sparat '
           quoteStart='1422092'
           quoteEnd='1422230'
-          quoteDuration='17000'
+          quoteDuration='2000'
           quoteUnit='liter'
           quoteAfter=' hittills i år på att återvinna eget vatten'
         />
@@ -278,7 +278,7 @@ export default class Production extends Component {
           thisYearStart='0'
           thisYearEnd='21000'
           thisYearDuration='3'
-          quoteBefore='Helt gratis! Att köpa motsvarande mängd skulle kostat '
+          quoteBefore='Att köpa motsvarande mängd skulle kostat '
           quoteStart='0'
           quoteEnd='5200'
           quoteDuration='3'
