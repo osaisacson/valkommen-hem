@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Collapsible from './components/Collapsible.js';
+import Notifications from './components/Notifications.js';
 
 import Harvest from './components/Harvest';
 import Production from './components/Production';
@@ -36,19 +37,6 @@ function App() {
 
   }, [])
 
-  // const data = [
-  //   {x: 0, y: 6},
-  //   {x: 1, y: 7},
-  //   {x: 2, y: 6},
-  //   {x: 3, y: 7},
-  //   {x: 4, y: 8},
-  //   {x: 5, y: 7},
-  //   {x: 6, y: 7},
-  //   {x: 7, y: 8},
-  //   {x: 8, y: 9},
-  //   {x: 9, y: 8}
-  // ];
-
   const [show, setShow] = React.useState(true);
 
   return user && (
@@ -61,10 +49,12 @@ function App() {
         </div>
       </header>
 
-      <div className="header-and-badge">
+      {/* <div className="header-and-badge">
         <div>Uppdateringar </div> 
         <Badge variant="danger">5</Badge>
-      </div>
+      </div> */}
+
+      <Notifications />
 
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
