@@ -243,7 +243,7 @@ export default class Production extends Component {
           <p>Denna mån: 1453 liter</p>
           <p>Detta året: 21000 liter</p>
           <blockquote className="blockquote mb-0 card-body">
-            <p>Helt gratis! Att köpa motsvarande mängd skulle kostat<strong><CountUp 
+            <p>Helt gratis! Att köpa motsvarande mängd skulle kostat <strong><CountUp 
                end={5200} separator=" " redraw/> kr</strong>.</p>
           </blockquote>
         </Accordion.Content>
