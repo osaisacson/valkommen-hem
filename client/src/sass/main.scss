@@ -205,6 +205,17 @@ a {
 
 //Accordion custom
 
+.accordion-info {
+  @extend .one-line-spread;
+  justify-content: space-between;
+  margin: 0 20px;
+
+  .nr {
+    font-weight:600;
+  }
+}
+
+
 .accordion-custom-trigger-section {
   @extend .one-line-spread;
   justify-content: space-between;

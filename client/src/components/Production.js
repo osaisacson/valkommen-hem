@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Accordion, Icon } from 'semantic-ui-react';
 import CountUp from 'react-countup';
+import AccordionInfo from './../components/AccordionInfo';
 
 import vatten from './../vatten.png';
 import fisk from './../fisk.png'; 
 import jord from './../jord.png'; 
-import lanabyta from './../lana-byta.png'; 
 import naringslosning from './../naringslosning.png'; 
 import odling from './../odling.png'; 
 import odlingslampor from './../odlingslampor.png'; 
@@ -131,17 +131,22 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 1}>
-          <p>Förra mån: 122 542 liter</p>
-          <p>Denna mån: <CountUp 
-                start={12303} end={13370} delay={1} duration={17000} separator=" " redraw/> 
-                liter</p>
-          <p>Detta året: <CountUp 
-                start={1422092} end={1422230} delay={1} duration={2000} separator=" " redraw/> 
-                liter</p>
-          <blockquote className="blockquote mb-0 card-body">
-            <p>Vilket betyder att vi sparat <strong><CountUp 
-                start={38434} end={39289} delay={1} duration={2000} separator=" " redraw/> kr</strong> hittills i år på att återvinna eget vatten.</p>
-          </blockquote>
+        <AccordionInfo
+          unit='liter'
+          lastMonth='122542'
+          thisMonthStart='12303'
+          thisMonthEnd='13370'
+          thisMonthDuration='17000'
+          thisYearStart='1422092'
+          thisYearEnd='1422230'
+          thisYearDuration='2000'
+          quoteBefore='Vilket betyder att vi sparat '
+          quoteStart='38434'
+          quoteEnd='39289'
+          quoteDuration='2000'
+          quoteUnit='liter'
+          quoteAfter=' hittills i år på att återvinna eget vatten'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -161,13 +166,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 2}>
-          <p>Förra mån: 56 340 liter</p>
-          <p>Denna mån: 9453 liter</p>
-          <p>Detta året: 340 562 liter</p>
-          <blockquote className="blockquote mb-0 card-body">
-            <p>Och genom det drygat ut vår vattenkonsumtion i år med <strong><CountUp 
-                start={23} end={26} delay={1} duration={2000} separator=" " redraw/> %</strong></p>
-          </blockquote>
+        <AccordionInfo
+          unit='liter'
+          lastMonth='56340'
+          thisMonthStart='0'
+          thisMonthEnd='9453'
+          thisMonthDuration='3'
+          thisYearStart='0'
+          thisYearEnd='340562'
+          thisYearDuration='3'
+          quoteBefore='Och genom det drygat ut vår vattenkonsumtion i år med '
+          quoteStart='23'
+          quoteEnd='26'
+          quoteDuration='2000'
+          quoteUnit='%'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -187,13 +200,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 3}>
-          <p>Förra mån: 470 kg</p>
-          <p>Denna mån: 380 kg</p>
-          <p>Detta året: <CountUp start={3170} end={3240} duration={2000} separator=" " redraw/> kg</p>
-          <blockquote className="blockquote mb-0 card-body">
-            <p>Vilket annars skulle kostat <strong><CountUp 
-                start={214670} end={215000} delay={1} duration={2000} separator=" " redraw/> kr</strong>.</p>
-          </blockquote>
+        <AccordionInfo
+          unit='kg'
+          lastMonth='470'
+          thisMonthStart='0'
+          thisMonthEnd='380'
+          thisMonthDuration='3'
+          thisYearStart='0'
+          thisYearEnd='3240'
+          thisYearDuration='3'
+          quoteBefore='Vilket annars skulle kostat '
+          quoteStart='214670'
+          quoteEnd='215000'
+          quoteDuration='2000'
+          quoteUnit='kr'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -213,13 +234,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 4}>
-          <p>Förra mån: 6122 kg</p>
-          <p>Denna mån: 5251 kg</p>
-          <p>Detta året: 4710 kg</p>
-          <blockquote className="blockquote mb-0 card-body">
-            <p>Och genom det minskat vårt gemensamma c02 fotavtryck med <strong><CountUp 
-               end={257} separator=" " redraw/> kg</strong>.</p>
-          </blockquote>
+        <AccordionInfo
+          unit='kg'
+          lastMonth='612'
+          thisMonthStart='0'
+          thisMonthEnd='525'
+          thisMonthDuration='3'
+          thisYearStart='0'
+          thisYearEnd='4710'
+          thisYearDuration='3'
+          quoteBefore='Och genom det minskat vårt gemensamma c02 med '
+          quoteStart='0'
+          quoteEnd='257'
+          quoteDuration='3'
+          quoteUnit='kg'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -239,13 +268,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 5}>
-          <p>Förra mån: 2770 liter</p>
-          <p>Denna mån: 1453 liter</p>
-          <p>Detta året: 21000 liter</p>
-          <blockquote className="blockquote mb-0 card-body">
-            <p>Helt gratis! Att köpa motsvarande mängd skulle kostat <strong><CountUp 
-               end={5200} separator=" " redraw/> kr</strong>.</p>
-          </blockquote>
+        <AccordionInfo
+          unit='liter'
+          lastMonth='2770'
+          thisMonthStart='0'
+          thisMonthEnd='1453'
+          thisMonthDuration='3'
+          thisYearStart='0'
+          thisYearEnd='21000'
+          thisYearDuration='3'
+          quoteBefore='Helt gratis! Att köpa motsvarande mängd skulle kostat '
+          quoteStart='0'
+          quoteEnd='5200'
+          quoteDuration='3'
+          quoteUnit='kr'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -265,9 +302,22 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 6}>
-          <p>Förra mån: 41 kg</p>
-          <p>Denna mån: 23 kg</p>
-          <p>Detta året: 145 kg</p>
+        <AccordionInfo
+          unit='kg'
+          lastMonth='41'
+          thisMonthStart='0'
+          thisMonthEnd='23'
+          thisMonthDuration='3'
+          thisYearStart='0'
+          thisYearEnd='145'
+          thisYearDuration='3'
+          quoteBefore='Skapat av '
+          quoteStart='0'
+          quoteEnd='6731'
+          quoteDuration='3'
+          quoteUnit='kg'
+          quoteAfter=' råmaterial.'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -287,9 +337,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 7}>
-          <p>Förra mån: 5121 kWh</p>
-          <p>Denna mån: 3251 kWh</p>
-          <p>Detta året: <CountUp start={120210} end={124000} delay={1} duration={16000} separator=" " redraw/> kWh</p>
+        <AccordionInfo
+          unit='kWh'
+          lastMonth='5121'
+          thisMonthStart='0'
+          thisMonthEnd='3251'
+          thisMonthDuration='3'
+          thisYearStart='70000'
+          thisYearEnd='74000'
+          thisYearDuration='16000'
+          quoteBefore='Motvarande laddningen av'
+          quoteStart='0'
+          quoteEnd='123'
+          quoteDuration='3'
+          quoteAfter=' elbilar dagligen i ett år.'
+        />
         </Accordion.Content>
 
         <Accordion.Title
@@ -309,9 +371,21 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 8}>
-          <p>Förra mån: 5121 kWh</p>
-          <p>Denna mån: 3251 kWh</p>
-          <p>Detta året: <CountUp start={160000} end={180000} delay={1} duration={16000} separator=" " redraw/> kWh</p>
+        <AccordionInfo
+          unit='kWh'
+          lastMonth='8421'
+          thisMonthStart='0'
+          thisMonthEnd='5982'
+          thisMonthDuration='3'
+          thisYearStart='160000'
+          thisYearEnd='180000'
+          thisYearDuration='16000'
+          quoteBefore='Motvarande'
+          quoteStart='1234'
+          quoteEnd='2245'
+          quoteDuration='2000'
+          quoteAfter=' lampor konstant tända i ett år.'
+        />
         </Accordion.Content>
 
 
@@ -332,9 +406,22 @@ export default class Production extends Component {
           </div>
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 9}>
-          <p>Förra mån: 5121 kWh</p>
-          <p>Denna mån: <CountUp start={3251} end={4182} delay={1} duration={19000} separator=" " redraw/> kWh</p>
-          <p>Detta året: <CountUp start={121500} end={122000} delay={1} duration={4000} separator=" " redraw/> kWh</p>
+        <AccordionInfo
+          unit='kWh'
+          lastMonth='5121'
+          thisMonthStart='3251'
+          thisMonthEnd='4182'
+          thisMonthDuration='19000'
+          thisYearStart='121500'
+          thisYearEnd='122000'
+          thisYearDuration='4000'
+          quoteBefore='Varav'
+          quoteStart='0'
+          quoteEnd='43'
+          quoteDuration='3'
+          quoteUnit='%'
+          quoteAfter=' är täck av vår egen elproduktion.'
+        />
         </Accordion.Content>
       </Accordion>
     )
