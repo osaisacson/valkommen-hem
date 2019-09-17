@@ -124,7 +124,7 @@ export default class Production extends Component {
               <div className="accordion-custom-title">Vattenåtervinning</div>
               <div className="accordion-custom-countup">
                 <CountUp 
-                start={1422092} end={1422230} delay={1} duration={2000} separator=" " redraw/>
+                start={1422092} end={1422230} duration={2000} separator=" " redraw/>
                 <span className="accordion-custom-title"> liter</span></div>
             </div>
             <Icon name='dropdown'/>
@@ -159,7 +159,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Regnvatten</div>
               <div className="accordion-custom-countup">
-                <CountUp end={340562} duration={4} separator=" " redraw/>
+                <CountUp end={340562} duration={3} separator=" " redraw/>
                 <span className="accordion-custom-title"> liter</span></div>
             </div>
             <Icon name='dropdown' />
@@ -208,7 +208,7 @@ export default class Production extends Component {
           thisMonthDuration='3'
           thisYearStart='0'
           thisYearEnd='3240'
-          thisYearDuration='3'
+          thisYearDuration='2000'
           quoteBefore='Vilket motsvarar ett värde av '
           quoteStart='650000'
           quoteEnd='675000'
@@ -242,7 +242,7 @@ export default class Production extends Component {
           thisMonthDuration='3'
           thisYearStart='0'
           thisYearEnd='4710'
-          thisYearDuration='3'
+          thisYearDuration='4'
           quoteBefore='Och genom det minskat vår gemensamma CO2 med '
           quoteStart='0'
           quoteEnd='250'
@@ -262,7 +262,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Näringslösning</div>
               <div className="accordion-custom-countup">
-                <CountUp end={21000} duration={4} separator=" " redraw/>
+                <CountUp end={21000} duration={3} separator=" " redraw/>
                 <span className="accordion-custom-title"> liter</span></div>
             </div>
             <Icon name='dropdown' />
@@ -296,7 +296,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Jord</div>
               <div className="accordion-custom-countup">
-                <CountUp end={145} duration={4} separator=" " redraw/>
+                <CountUp end={145} duration={3} separator=" " redraw/>
                 <span className="accordion-custom-title"> kg</span></div>
             </div>
             <Icon name='dropdown' />
@@ -331,7 +331,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Energiproduktion</div>
               <div className="accordion-custom-countup">
-                <CountUp start={70000} end={74000} delay={1} duration={16000} separator=" " redraw/>
+                <CountUp start={70000} end={74000} duration={16000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kWh</span></div>
             </div>
             <Icon name='dropdown' />
@@ -365,7 +365,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Energikonsumtion</div>
               <div className="accordion-custom-countup">
-                <CountUp start={160000} end={180000} delay={1} duration={16000} separator=" " redraw/>
+                <CountUp start={160000} end={180000} duration={16000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kWh</span></div>
             </div>
             <Icon name='dropdown' />
@@ -400,7 +400,7 @@ export default class Production extends Component {
             <div className="accordion-custom-title-countup-section">
               <div className="accordion-custom-title">Sollampor</div>
               <div className="accordion-custom-countup">
-                <CountUp start={121500} end={122000} delay={1} duration={4000} separator=" " redraw/>
+                <CountUp start={121500} end={122000} duration={4000} separator=" " redraw/>
                 <span className="accordion-custom-title"> kWh</span></div>
             </div>
             <Icon name='dropdown' />
