@@ -206,7 +206,7 @@ export default class Production extends Component {
           thisMonthStart='0'
           thisMonthEnd='380'
           thisMonthDuration='3'
-          thisYearStart='0'
+          thisYearStart='3170'
           thisYearEnd='3240'
           thisYearDuration='2000'
           quoteBefore='Vilket motsvarar ett värde av '
