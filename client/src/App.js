@@ -74,7 +74,7 @@ function App() {
       <Tab eventKey="harvest" title="Skörd">
         <Harvest />
       </Tab>
-      <Tab eventKey="water" title="Välj">
+      <Tab eventKey="water" title="Val">
 
       <Alert show={show} variant="success">
         <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
