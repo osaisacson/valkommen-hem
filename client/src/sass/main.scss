@@ -3,6 +3,7 @@
 @import "base/clearfix";
 @import "base/variables";
 @import "base/mixins";
+@import '~semantic-ui-css/semantic.css';
 
 //Main
 html {
@@ -17,6 +18,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: unset !important;
 }
 
 .App {
@@ -72,11 +74,34 @@ h3 {
 }
 
 
-//Overrides
+//Overrides: to be cleaned
 a {
   color: #666 !important;
   font-family: 'Libre Franklin', sans-serif;
   text-transform: uppercase;
+}
+
+.nav-tabs {
+  background-color: rgba(255,255,255,0.7);
+  border-bottom: 0;
+
+  .nav-link.active,
+  .nav-link:hover {
+    background-color: transparent !important;
+    border: 0 !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+}
+
+.ui.styled.accordion {
+  width: 100%;
+}
+
+.ui.styled.accordion, 
+.ui.styled.accordion .accordion {
+  box-shadow: none !important;
+  background: rgba(255, 255, 255, .7) !important;
 }
 
 .react-sweet-progress {
@@ -187,9 +212,31 @@ a {
 
 .logos {
   width: 60px;
+  margin-right: 15px;
 }
 
 //COMPONENTS
+
+//Accordion custom
+
+.accordion-custom-trigger-section {
+  @extend .one-line-spread;
+  justify-content: space-between;
+}
+
+.accordion-custom-title-countup-section {
+  flex-grow: 2;
+}
+
+.accordion-custom-title {
+  font-size: 18px;
+  color: #000;
+}
+
+.accordion-custom-countup {
+  font-size: 22px;
+  color: #000;
+}
 
 //Voting
 .voting {

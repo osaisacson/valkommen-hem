@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Collapsible from './components/Collapsible.js';
+import AccordionCustom from './components/AccordionCustom';
+
 // import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -75,84 +77,7 @@ function App() {
 
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
       <Tab eventKey="home" title="Hem">
-      <h3>Aktuell produktion</h3>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Vattenåtervinning - 1 422 230 liter'>
-      <div className="stats-and-icon">
-          <img src={vatten} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 122 542 liter</p>
-          <p>Denna mån: 13 370 liter</p>
-          <p>Detta året: 1 422 230 liter</p>
-          </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Regnvatten - 340 562 liter'>
-        <div className="stats-and-icon">
-          <img src={regn} className="logos" alt="logo" />
-            <div>
-            <p>Förra mån: 56 340 liter</p>
-            <p>Denna mån: 9453 liter</p>
-            <p>Detta året: 340 562 liter</p>
-            </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Energi - 55 000 kWh'>
-      <div className="stats-and-icon">
-          <img src={solel} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 5121 kWh</p>
-          <p>Denna mån: 3251 kWh</p>
-          <p>Detta året: 55 000 kWh</p>
-          </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näring - 44 203 liter'>
-      <div className="stats-and-icon">
-          <img src={naringslosning} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 23 370 liter</p>
-          <p>Denna mån: 13 453 liter</p>
-          <p>Detta året: 44, 000 liter</p>
-          </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Jord - 145 kg'>
-      <div className="stats-and-icon">
-          <img src={jord} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 41 kg</p>
-          <p>Denna mån: 23 kg</p>
-          <p>Detta året: 145 kg</p>
-          </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Bladgrönt - 4210 kg'>
-      <div className="stats-and-icon">
-          <img src={odling} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 1200 kg</p>
-          <p>Denna mån: 842 kg</p>
-          <p>Detta året: 4210 kg</p>
-          </div>
-        </div>
-      </Collapsible>
-
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Fisk - 145 kg'>
-      <div className="stats-and-icon">
-          <img src={fisk} className="logos" alt="logo" />
-          <div>
-          <p>Förra mån: 41 kg</p>
-          <p>Denna mån: 23 kg</p>
-          <p>Detta året: 145 kg</p>
-          </div>
-        </div>
-      </Collapsible>
-    
+        <AccordionCustom />    
       </Tab>
       
       <Tab eventKey="harvest" title="Skörd">
@@ -341,3 +266,81 @@ export default App;
 <Collapsible trigger={"Add a triggerStyle Prop to add style directly to the trigger"} triggerStyle={{background: '#2196f3'}}>
   <p>Adds a <code>style</code> attribute to the <code>span</code> trigger.</p>
 </Collapsible> */
+
+
+{/* <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Vattenåtervinning - 1 422 230 liter'>
+<div className="stats-and-icon">
+    <img src={vatten} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 122 542 liter</p>
+    <p>Denna mån: 13 370 liter</p>
+    <p>Detta året: 1 422 230 liter</p>
+    </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Regnvatten - 340 562 liter'>
+  <div className="stats-and-icon">
+    <img src={regn} className="logos" alt="logo" />
+      <div>
+      <p>Förra mån: 56 340 liter</p>
+      <p>Denna mån: 9453 liter</p>
+      <p>Detta året: 340 562 liter</p>
+      </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Energi - 55 000 kWh'>
+<div className="stats-and-icon">
+    <img src={solel} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 5121 kWh</p>
+    <p>Denna mån: 3251 kWh</p>
+    <p>Detta året: 55 000 kWh</p>
+    </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Näring - 44 203 liter'>
+<div className="stats-and-icon">
+    <img src={naringslosning} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 23 370 liter</p>
+    <p>Denna mån: 13 453 liter</p>
+    <p>Detta året: 44, 000 liter</p>
+    </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Jord - 145 kg'>
+<div className="stats-and-icon">
+    <img src={jord} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 41 kg</p>
+    <p>Denna mån: 23 kg</p>
+    <p>Detta året: 145 kg</p>
+    </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Bladgrönt - 4210 kg'>
+<div className="stats-and-icon">
+    <img src={odling} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 1200 kg</p>
+    <p>Denna mån: 842 kg</p>
+    <p>Detta året: 4210 kg</p>
+    </div>
+  </div>
+</Collapsible>
+
+<Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Fisk - 145 kg'>
+<div className="stats-and-icon">
+    <img src={fisk} className="logos" alt="logo" />
+    <div>
+    <p>Förra mån: 41 kg</p>
+    <p>Denna mån: 23 kg</p>
+    <p>Detta året: 145 kg</p>
+    </div>
+  </div>
+</Collapsible> */}
