@@ -3,7 +3,6 @@ import './sass/main.scss';
 import axios from 'axios';
 
 import '../../node_modules/react-vis/dist/style.css';
-// import {XYPlot, LineSeries} from 'react-vis';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
@@ -13,116 +12,150 @@ import Notifications from './components/Notifications.js';
 import Harvest from './components/Harvest';
 import Production from './components/Production';
 
-// import ProgressBar from 'react-bootstrap/ProgressBar';
 import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
 import Alert from 'react-bootstrap/Alert';
 import Image from 'react-bootstrap/Image';
 
-import bilpool from './bilpool.png'; 
-import lanabyta from './lana-byta.png'; 
-
-// import { Progress } from 'react-sweet-progress';
-import "react-sweet-progress/lib/style.css";
+import bilpool from './bilpool.png';
 
 function App() {
-  const [user, setUser] = React.useState(null)
+  const [user, setUser] = React.useState(null);
 
   React.useEffect(() => {
     // axios.get('/api?user=osaisacson') //sets query for which user data to get
-    axios.get('/api')
-    .then(response => {
-      setUser(response.data)
-    })
-
-  }, [])
+    axios.get('/api').then(response => {
+      setUser(response.data);
+    });
+  }, []);
 
   const [show, setShow] = React.useState(true);
 
-  return user && (
-    <div className="App">
-      <header className="one-line-spread">
-        <img src={'/logo.png'} className="logo" alt="logo" />
-        <div className="header-title">
-          <h2>Välkommen hem till</h2>
-          <h1>Resilienshus Floda</h1>
-        </div>
-      </header>
+  return (
+    user && (
+      <div className="App">
+        <header className="one-line-spread">
+          <img src={'/logo.png'} className="logo" alt="logo" />
+          <div className="header-title">
+            <h2>Välkommen hem till</h2>
+            <h1>Resilienshus Floda</h1>
+          </div>
+        </header>
 
-      {/* <div className="header-and-badge">
-        <div>Uppdateringar </div> 
-        <Badge variant="danger">5</Badge>
-      </div> */}
+        <Notifications />
 
-      <Notifications />
+        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+          <Tab eventKey="produktion" title="Produktion">
+            <Production />
+          </Tab>
 
-      <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-      <Tab eventKey="home" title="Hem">
-        <Production />    
-      </Tab>
-      
-      <Tab eventKey="harvest" title="Skörd">
-        <Harvest />
-      </Tab>
-      <Tab eventKey="water" title="Val">
+          <Tab eventKey="harvest" title="Skörd">
+            <Harvest />
+          </Tab>
 
-      <Alert show={show} variant="success">
-        <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
-        <Image src="https://images.unsplash.com/photo-1536630596251-b12ba0d9f7d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Card image" fluid />
-        <p>
-        Microblad är en relativt ny företeelse i Sverige - det är plantor som skördas när det första paret med riktiga blad syns. De har ett väldigt högt näringsvärde med studier som visat att dessa plantor trots sin ringa storlek har ett 4-40 gånger högre näringsinnehåll än den färdigvuxna salladen (beroende på näringsämne).
-        </p>
-        <hr />
-        <div className="d-flex justify-content-end">
-          <Button onClick={() => setShow(false)} variant="outline-success">
-            Ja, jag tycker vi ska odla mikrogreens!
-          </Button>
-        </div>
-      </Alert>
+          <Tab eventKey="water" title="Val">
+            <Alert show={show} variant="success">
+              <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
+              <Image
+                src="https://images.unsplash.com/photo-1536630596251-b12ba0d9f7d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt="Card image"
+                fluid
+              />
+              <p>
+                Microblad är en relativt ny företeelse i Sverige - det är
+                plantor som skördas när det första paret med riktiga blad syns.
+                De har ett väldigt högt näringsvärde med studier som visat att
+                dessa plantor trots sin ringa storlek har ett 4-40 gånger högre
+                näringsinnehåll än den färdigvuxna salladen (beroende på
+                näringsämne).
+              </p>
+              <hr />
+              <div className="d-flex justify-content-end">
+                <Button
+                  onClick={() => setShow(false)}
+                  variant="outline-success"
+                >
+                  Ja, jag tycker vi ska odla mikrogreens!
+                </Button>
+              </div>
+            </Alert>
 
-      {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du vill vi ska odla mikroblad, klicka här om du vill ändra dig</Button>}
+            {!show && (
+              <Button onClick={() => setShow(true)}>
+                Du har tyckt till och sagt du vill vi ska odla mikroblad, klicka
+                här om du vill ändra dig
+              </Button>
+            )}
 
-      <Alert show={show} variant="success">
-        <Alert.Heading>Föreslagen ny aktivitet: Bilfri tisdag!</Alert.Heading>
-        <Image src="https://images.unsplash.com/photo-1533650936805-912836eda0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="Card image" fluid />
-        <p>Om alla i huset inte åker bil en dag i veckan skulle vi dra ner vårt gemensamma c02 med 145kg/år.</p>
-        <hr />
-        <div className="d-flex justify-content-end">
-          <Button onClick={() => setShow(false)} variant="outline-success">
-            Ja, jag är med. Ingen bil på tisdagar!
-          </Button>
-        </div>
-      </Alert>
+            <Alert show={show} variant="success">
+              <Alert.Heading>
+                Föreslagen ny aktivitet: Bilfri tisdag!
+              </Alert.Heading>
+              <Image
+                src="https://images.unsplash.com/photo-1533650936805-912836eda0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                alt="Card image"
+                fluid
+              />
+              <p>
+                Om alla i huset inte åker bil en dag i veckan skulle vi dra ner
+                vårt gemensamma c02 med 145kg/år.
+              </p>
+              <hr />
+              <div className="d-flex justify-content-end">
+                <Button
+                  onClick={() => setShow(false)}
+                  variant="outline-success"
+                >
+                  Ja, jag är med. Ingen bil på tisdagar!
+                </Button>
+              </div>
+            </Alert>
 
-      {!show && <Button onClick={() => setShow(true)}>Du har tyckt till och sagt du skippar bilen på tisdagar, klicka här om du vill ändra dig</Button>}
-      </Tab>
-      <Tab eventKey="neighbours" title="Grannar">
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Låna socker'>
-          <p>folk som vill låna socker</p>
-      </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Byta tjänster'>
-          <p>folk som vill ha barnvakt</p>
-      </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Aktiviteter'>
-          <p>Jag vill ha fest</p>
-      </Collapsible>
-      <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Transport'>
-        <img src={bilpool} className="logos" alt="logo" />
-      </Collapsible>
-      </Tab>
-    </Tabs>
-    </div>
+            {!show && (
+              <Button onClick={() => setShow(true)}>
+                Du har tyckt till och sagt du skippar bilen på tisdagar, klicka
+                här om du vill ändra dig
+              </Button>
+            )}
+          </Tab>
+          <Tab eventKey="neighbours" title="Grannar">
+            <Collapsible
+              triggerClassName="main-trigger"
+              transitionTime={400}
+              trigger="Låna socker"
+            >
+              <p>folk som vill låna socker</p>
+            </Collapsible>
+            <Collapsible
+              triggerClassName="main-trigger"
+              transitionTime={400}
+              trigger="Byta tjänster"
+            >
+              <p>folk som vill ha barnvakt</p>
+            </Collapsible>
+            <Collapsible
+              triggerClassName="main-trigger"
+              transitionTime={400}
+              trigger="Aktiviteter"
+            >
+              <p>Jag vill ha fest</p>
+            </Collapsible>
+            <Collapsible
+              triggerClassName="main-trigger"
+              transitionTime={400}
+              trigger="Transport"
+            >
+              <img src={bilpool} className="logos" alt="logo" />
+            </Collapsible>
+          </Tab>
+        </Tabs>
+      </div>
+    )
   );
 }
 
 export default App;
 
-
-
-
-
 //Full data {JSON.stringify(user)}
-
 
 /* <img src={user.user.avatar_url} className="logo" alt="logo" /> */
 /* <p>Test API (should show name): {user.user.login}</p>
@@ -142,16 +175,17 @@ export default App;
 /* <Progress percent={43} status="success" /> */
 // <Progress percent={32} status="success" />
 
-
-
-{/* <Progress percent={88} status="error" theme={{
+{
+  /* <Progress percent={88} status="error" theme={{
         error: {
           color: '#fbc630'
         }
-      }} /> */}
-     
-      {/* <Progress percent={100} status="success" /> */}
+      }} /> */
+}
 
+{
+  /* <Progress percent={100} status="success" /> */
+}
 
 //https://www.npmjs.com/package/react-collapsible
 
@@ -213,8 +247,8 @@ export default App;
   <p>Adds a <code>style</code> attribute to the <code>span</code> trigger.</p>
 </Collapsible> */
 
-
-{/* <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Vattenåtervinning - 1 422 230 liter'>
+{
+  /* <Collapsible triggerClassName="main-trigger" transitionTime={400} trigger='Vattenåtervinning - 1 422 230 liter'>
 <div className="stats-and-icon">
     <img src={vatten} className="logos" alt="logo" />
     <div>
@@ -289,4 +323,5 @@ export default App;
     <p>Detta året: 145 kg</p>
     </div>
   </div>
-</Collapsible> */}
+</Collapsible> */
+}
