@@ -1,20 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,600,900&display=swap);
-@import "base/reset";
-@import "base/clearfix";
-@import "base/variables";
-@import "base/mixins";
+@import 'base/reset';
+@import 'base/clearfix';
+@import 'base/variables';
+@import 'base/mixins';
 @import '~semantic-ui-css/semantic.css';
 
 //Main
 html {
   font-size: $BASE_FONT_SIZE;
-  background: url("https://images.unsplash.com/photo-1531904895138-ac676f9f125a?ixlib=rb-1.2.1&auto=format&fit=crop&w=976&q=80") no-repeat center center fixed; 
+  background: url('https://images.unsplash.com/photo-1531904895138-ac676f9f125a?ixlib=rb-1.2.1&auto=format&fit=crop&w=976&q=80')
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -23,9 +23,9 @@ body {
 
 .App {
   margin-bottom: 150px;
-//   @include for-phone-only {    
-//     background-color: #282c34;
-//  }
+  //   @include for-phone-only {
+  //     background-color: #282c34;
+  //  }
 }
 
 #root {
@@ -34,10 +34,9 @@ body {
   margin-right: auto;
 }
 
-
 //Text
 
-h1, 
+h1,
 h2,
 h3,
 h4 {
@@ -46,7 +45,7 @@ h4 {
   width: fit-content;
 }
 
-h1, 
+h1,
 h2 {
   font-weight: 800;
 }
@@ -59,7 +58,6 @@ h3 {
   font-size: 12px !important;
 }
 
-
 //Overrides: to be cleaned
 a {
   color: #666 !important;
@@ -68,7 +66,7 @@ a {
 }
 
 .nav-tabs {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 0;
 
   .nav-link.active,
@@ -80,26 +78,12 @@ a {
   }
 }
 
-.ui.styled.accordion {
-  width: 100%;
-}
-
-.ui.styled.accordion, 
-.ui.styled.accordion .accordion {
-  box-shadow: none !important;
-  background: rgba(255, 255, 255, .7) !important;
-}
-
-.react-sweet-progress {
-  padding-right: 5px;
-}
-
-.react-sweet-progress-line-inner {
-  border-radius: 0 !important;
+.blockquote {
+  background-color: lightseagreen;
+  color: white;
 }
 
 .card-img-overlay {
-
   .card-title {
     font-size: 2rem;
   }
@@ -107,7 +91,7 @@ a {
   .card-title,
   .card-text {
     color: white;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, 0.4);
     width: fit-content;
     padding: 5px;
     margin: 0;
@@ -130,7 +114,6 @@ a {
   flex-direction: column;
   margin: 15px 0;
 }
-
 
 //Sections
 .header-title {
@@ -204,13 +187,14 @@ a {
 //COMPONENTS
 
 .notifications-custom-div {
-
-  .ui.styled.accordion .title, .ui.styled.accordion .accordion .title {
+  .ui.styled.accordion .title,
+  .ui.styled.accordion .accordion .title {
     padding: 0;
   }
 
-  .ui.styled.accordion, .ui.styled.accordion .accordion {
-      background: unset !important;
+  .ui.styled.accordion,
+  .ui.styled.accordion .accordion {
+    background: unset !important;
   }
 
   .notification-custom {
@@ -235,7 +219,7 @@ a {
   margin: 0 20px;
 
   .nr {
-    font-weight:600;
+    font-weight: 600;
   }
 }
 
@@ -269,7 +253,7 @@ a {
   background-color: $collapsibleBackground;
 }
 
-.countUp, 
+.countUp,
 .countDown {
   font-family: 'FontAwesome';
   background-color: transparent;
@@ -277,12 +261,12 @@ a {
 
 .countUp {
   content: '\f0d8';
-  padding: 10px 20px 30px 20px;;
+  padding: 10px 20px 30px 20px;
 }
 
 .countDown {
   content: '\f0d7';
-  padding: 30px 20px 10px 20px;;
+  padding: 30px 20px 10px 20px;
 }
 
 //Progress
@@ -308,4 +292,4 @@ a {
   font-weight: 400;
 }
 
-@import "components/Collapsible";
+@import 'components/Collapsible';

@@ -173,7 +173,7 @@ window.Dataset = {
       quoteAfter: ' lampor konstant tända i ett år'
     },
     {
-      id: '8',
+      id: '9',
       icon: odlingslampor,
       title: 'Sollampor',
       unit: 'kWh',

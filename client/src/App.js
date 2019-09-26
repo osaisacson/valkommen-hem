@@ -1,6 +1,6 @@
 import React from 'react';
 import './sass/main.scss';
-import axios from 'axios';
+import './dataset.js';
 
 import '../../node_modules/react-vis/dist/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,20 +18,17 @@ import Image from 'react-bootstrap/Image';
 
 import bilpool from './bilpool.png';
 
-function App() {
-  const [user, setUser] = React.useState(null);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    // To use the 'this' keyword, we need to bind it to our function
+    // this.handleClick = this.handleClick.bind(this);
+  }
 
-  React.useEffect(() => {
-    // axios.get('/api?user=osaisacson') //sets query for which user data to get
-    axios.get('/api').then(response => {
-      setUser(response.data);
-    });
-  }, []);
-
-  const [show, setShow] = React.useState(true);
-
-  return (
-    user && (
+  // const [show, setShow] = React.useState(true);
+  render() {
+    return (
       <div className="App">
         <header className="one-line-spread">
           <img src={'/logo.png'} className="logo" alt="logo" />
@@ -53,7 +50,7 @@ function App() {
           </Tab>
 
           <Tab eventKey="water" title="Val">
-            <Alert show={show} variant="success">
+            {/* <Alert show={show} variant="success">
               <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
               <Image
                 src="https://images.unsplash.com/photo-1536630596251-b12ba0d9f7d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
@@ -115,7 +112,7 @@ function App() {
                 Du har tyckt till och sagt du skippar bilen på tisdagar, klicka
                 här om du vill ändra dig
               </Button>
-            )}
+            )} */}
           </Tab>
           <Tab eventKey="neighbours" title="Grannar">
             <Collapsible
@@ -149,8 +146,8 @@ function App() {
           </Tab>
         </Tabs>
       </div>
-    )
-  );
+    );
+  }
 }
 
 export default App;
