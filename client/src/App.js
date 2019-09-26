@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="one-line-spread">
+        <header className="one-line-left">
           <img src={'/logo.png'} className="logo" alt="logo" />
           <div className="header-title">
             <h2>Välkommen hem till</h2>

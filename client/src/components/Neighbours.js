@@ -17,8 +17,13 @@ export default class Production extends Component {
     return (
       <Accordion>
         <Card>
-          <Accordion.Toggle as={Card.Header} eventKey="1">
-            Grannar
+          <Accordion.Toggle
+            as={Card.Header}
+            eventKey="1"
+            className="one-line-spread"
+          >
+            <h2>Grannar</h2>
+            <span className="badge badge-primary badge-pill">4</span>
           </Accordion.Toggle>
 
           <Accordion.Collapse eventKey="1">
