@@ -5,15 +5,15 @@ class AccordionInfo extends React.Component {
   render() {
     return (
       <div>
-        <div className="accordion-info">
-          <p className="tid">Förra månaden:</p>{' '}
-          <p className="nr">
+        <h5 className="accordion-info">
+          <div className="tid">Förra månaden:</div>{' '}
+          <div className="nr">
             {this.props.lastMonth} {this.props.unit}
-          </p>
-        </div>
-        <div className="accordion-info">
-          <p className="tid">Denna månaden:</p>{' '}
-          <p className="nr">
+          </div>
+        </h5>
+        <h5 className="accordion-info">
+          <div className="tid">Denna månaden:</div>{' '}
+          <div className="nr">
             <CountUp
               start={this.props.thisMonthStart}
               end={this.props.thisMonthEnd}
@@ -23,11 +23,11 @@ class AccordionInfo extends React.Component {
               redraw
             />{' '}
             {this.props.unit}
-          </p>
-        </div>
-        <div className="accordion-info">
-          <p className="tid">Detta året:</p>{' '}
-          <p className="nr">
+          </div>
+        </h5>
+        <h5 className="accordion-info">
+          <div className="tid">Detta året:</div>{' '}
+          <div className="nr">
             <CountUp
               start={this.props.thisYearStart}
               end={this.props.thisYearEnd}
@@ -37,10 +37,10 @@ class AccordionInfo extends React.Component {
               redraw
             />{' '}
             {this.props.unit}
-          </p>
-        </div>
+          </div>
+        </h5>
         <blockquote className="blockquote mb-0 card-body">
-          <p>
+          <div>
             {this.props.quoteBefore}{' '}
             <strong>
               <CountUp
@@ -54,7 +54,7 @@ class AccordionInfo extends React.Component {
               {this.props.quoteUnit}
             </strong>
             {this.props.quoteAfter}.
-          </p>
+          </div>
         </blockquote>
       </div>
     );
