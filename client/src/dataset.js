@@ -201,7 +201,8 @@ window.Dataset = {
       title: 'Basilika',
       subtitle: 'Extra söt denna veckan!',
       clickedText: 'Redo att hämtas imorgon 12:00',
-      class: 'bokad'
+      class: 'bokad',
+      lastUpdated: '2 mins ago'
     },
     {
       id: '2',
@@ -209,7 +210,8 @@ window.Dataset = {
         'https://images.unsplash.com/photo-1508061461508-cb18c242f556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
       title: 'Pak Choi',
       clickedText: 'Redo att hämtas på fredag 12:00',
-      class: 'bokad'
+      class: 'bokad',
+      lastUpdated: '3 hours ago'
     },
     {
       id: '3',
@@ -217,7 +219,21 @@ window.Dataset = {
         'https://images.unsplash.com/photo-1528796940112-4979b4a98424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
       title: 'Koriander',
       clickedText: 'Redo att hämtas på torsdag 18:00',
+      class: 'bokad',
+      lastUpdated: 'yesterday'
+    }
+  ],
+
+  notifications: [
+    {
+      id: '1',
+      description: 'Basilika redo att hämtas imorgon 12:00!',
       class: 'bokad'
+    },
+    {
+      id: '2',
+      description: 'Din vattenkonsumtion är högre än vanligt.',
+      class: 'warning'
     }
   ]
 };

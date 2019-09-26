@@ -50,14 +50,6 @@ h2 {
   font-weight: 800;
 }
 
-h3 {
-  background-color: #000;
-  color: #fff;
-  padding: 5px;
-  margin-top: 15px !important;
-  font-size: 12px !important;
-}
-
 //Overrides: to be cleaned
 a {
   color: #666 !important;
@@ -79,29 +71,22 @@ a {
 }
 
 .blockquote {
-  background-color: lightseagreen;
+  background-color: slategrey;
   color: white;
 }
 
-.card-img-overlay {
-  .card-title {
-    font-size: 2rem;
-  }
-
-  .card-title,
-  .card-text {
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    width: fit-content;
-    padding: 5px;
-    margin: 0;
-  }
-
-  .btn {
-    margin-top: 100px;
-    float: right;
-  }
+.card {
+  background-color: rgba(255, 255, 255, .7) !important;
 }
+
+.card-img-overlay-text {
+  background-color: slategray;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 6px;
+  width: fit-content;
+}
+
 
 //Helpers
 .one-line-spread {
@@ -130,11 +115,6 @@ a {
   }
 }
 
-.single-accordion-section {
-  @extend .one-line-spread;
-  margin-bottom: 15px;
-}
-
 .section-header {
   display: flex;
   align-items: center;
@@ -145,9 +125,6 @@ a {
   padding: 20px 0;
 }
 
-.progress-and-accordion-section {
-  width: 100%;
-}
 
 .stats-and-icon {
   @extend .one-line-spread;
@@ -155,22 +132,9 @@ a {
 }
 
 .header-and-badge {
-  display: flex;
-  width: fit-content;
-  background-color: #000;
-  color: #fff;
-  height: 20px;
-  text-transform: uppercase;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
   font-family: 'Libre Franklin', sans-serif;
-  align-items: center;
-  padding: 15px 10px;
-  margin-bottom: 30px;
-  border-radius: 0 15px 15px 0;
-
-  div {
-    margin-right: 10px;
-  }
 }
 
 //Items
@@ -186,28 +150,23 @@ a {
 
 //COMPONENTS
 
+.booking-btn {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+}
+
 .notifications-custom-div {
-  .ui.styled.accordion .title,
-  .ui.styled.accordion .accordion .title {
-    padding: 0;
-  }
+  padding-bottom: 20px;
+}
 
-  .ui.styled.accordion,
-  .ui.styled.accordion .accordion {
-    background: unset !important;
-  }
+.notification-custom {
+  width: 100%;
+  margin-bottom: 5px;
+  color: black;
 
-  .notification-custom {
-    background-color: black;
-    width: 100%;
-    padding: 2px 10px;
-    border-radius: 15px;
-    color: #fff;
-    margin-bottom: 5px;
-
-    &.warning {
-      background-color: #7d132f;
-    }
+  &.warning {
+    color: #7d132f;
   }
 }
 

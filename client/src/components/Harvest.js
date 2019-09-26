@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Book from './../components/Book';
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 export default class Harvest extends Component {
   constructor(props) {
@@ -10,33 +10,7 @@ export default class Harvest extends Component {
     this.onClick = this.onClick.bind(this);
 
     this.state = {
-      list: [
-        {
-          id: '1',
-          img:
-            'https://images.unsplash.com/photo-1508595165502-3e2652e5a405?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Basilika',
-          subtitle: <Card.Text>Extra söt denna veckan!</Card.Text>,
-          clickedText: 'Redo att hämtas imorgon 12:00',
-          class: 'bokad'
-        },
-        {
-          id: '2',
-          img:
-            'https://images.unsplash.com/photo-1508061461508-cb18c242f556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-          title: 'Pak Choi',
-          clickedText: 'Redo att hämtas på fredag 12:00',
-          class: 'bokad'
-        },
-        {
-          id: '3',
-          img:
-            'https://images.unsplash.com/photo-1528796940112-4979b4a98424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
-          title: 'Koriander',
-          clickedText: 'Redo att hämtas på torsdag 18:00',
-          class: 'bokad'
-        }
-      ]
+      harvest: window.Dataset.harvest
     };
   }
 
@@ -45,29 +19,43 @@ export default class Harvest extends Component {
   }
 
   render() {
-    var text = 'boka';
-
     return (
-      <CardColumns>
-        {this.state.list.map(item => (
+      <CardGroup>
+        {this.state.harvest.map(item => (
           <Card key={item.id}>
-            <Card.Img src={item.img} alt="Card image" />
+            <Card.Img variant="top" src={item.img} />
             <Card.ImgOverlay>
-              <Card.Title>{item.title}</Card.Title>
-              {item.subtitle}
+              <Card.Body>
+                <Card.Title className="card-img-overlay-text">
+                  {item.title}
+                </Card.Title>
+                {item.subtitle ? (
+                  <Card.Text className="card-img-overlay-text">
+                    {item.subtitle}
+                  </Card.Text>
+                ) : (
+                  ''
+                )}
+              </Card.Body>
               <Book />
             </Card.ImgOverlay>
+
+            <Card.Footer>
+              <small className="text-muted">
+                Last updated {item.lastUpdated}.
+              </small>
+            </Card.Footer>
           </Card>
         ))}
-        <Card bg="primary" text="white" className="text-center p-3">
+        <Card className="p-3">
           <blockquote className="blockquote mb-0 card-body">
             <p>
               Än så länge har du ätit 56kg hemodlat i år, och genom det minskat
-              ditt c02 avtryck med <strong>25kg</strong>.
+              ditt c02 avtryck med 25kg.
             </p>
           </blockquote>
         </Card>
-      </CardColumns>
+      </CardGroup>
     );
   }
 }

@@ -49,7 +49,7 @@ class App extends React.Component {
             <Harvest />
           </Tab>
 
-          <Tab eventKey="water" title="Val">
+          <Tab eventKey="choices" title="Val">
             {/* <Alert show={show} variant="success">
               <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
               <Image
