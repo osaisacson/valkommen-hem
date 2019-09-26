@@ -6,17 +6,12 @@ import '../../node_modules/react-vis/dist/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import Collapsible from './components/Collapsible.js';
 import Notifications from './components/Notifications.js';
 
+import Choices from './components/Choices';
 import Harvest from './components/Harvest';
+import Neighbours from './components/Neighbours';
 import Production from './components/Production';
-
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
-import Image from 'react-bootstrap/Image';
-
-import bilpool from './bilpool.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,99 +45,11 @@ class App extends React.Component {
           </Tab>
 
           <Tab eventKey="choices" title="Val">
-            {/* <Alert show={show} variant="success">
-              <Alert.Heading>Föreslagen ny gröda: Mikroblad!</Alert.Heading>
-              <Image
-                src="https://images.unsplash.com/photo-1536630596251-b12ba0d9f7d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt="Card image"
-                fluid
-              />
-              <p>
-                Microblad är en relativt ny företeelse i Sverige - det är
-                plantor som skördas när det första paret med riktiga blad syns.
-                De har ett väldigt högt näringsvärde med studier som visat att
-                dessa plantor trots sin ringa storlek har ett 4-40 gånger högre
-                näringsinnehåll än den färdigvuxna salladen (beroende på
-                näringsämne).
-              </p>
-              <hr />
-              <div className="d-flex justify-content-end">
-                <Button
-                  onClick={() => setShow(false)}
-                  variant="outline-success"
-                >
-                  Ja, jag tycker vi ska odla mikrogreens!
-                </Button>
-              </div>
-            </Alert>
-
-            {!show && (
-              <Button onClick={() => setShow(true)}>
-                Du har tyckt till och sagt du vill vi ska odla mikroblad, klicka
-                här om du vill ändra dig
-              </Button>
-            )}
-
-            <Alert show={show} variant="success">
-              <Alert.Heading>
-                Föreslagen ny aktivitet: Bilfri tisdag!
-              </Alert.Heading>
-              <Image
-                src="https://images.unsplash.com/photo-1533650936805-912836eda0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                alt="Card image"
-                fluid
-              />
-              <p>
-                Om alla i huset inte åker bil en dag i veckan skulle vi dra ner
-                vårt gemensamma c02 med 145kg/år.
-              </p>
-              <hr />
-              <div className="d-flex justify-content-end">
-                <Button
-                  onClick={() => setShow(false)}
-                  variant="outline-success"
-                >
-                  Ja, jag är med. Ingen bil på tisdagar!
-                </Button>
-              </div>
-            </Alert>
-
-            {!show && (
-              <Button onClick={() => setShow(true)}>
-                Du har tyckt till och sagt du skippar bilen på tisdagar, klicka
-                här om du vill ändra dig
-              </Button>
-            )} */}
+            <Choices />
           </Tab>
+
           <Tab eventKey="neighbours" title="Grannar">
-            <Collapsible
-              triggerClassName="main-trigger"
-              transitionTime={400}
-              trigger="Låna socker"
-            >
-              <p>folk som vill låna socker</p>
-            </Collapsible>
-            <Collapsible
-              triggerClassName="main-trigger"
-              transitionTime={400}
-              trigger="Byta tjänster"
-            >
-              <p>folk som vill ha barnvakt</p>
-            </Collapsible>
-            <Collapsible
-              triggerClassName="main-trigger"
-              transitionTime={400}
-              trigger="Aktiviteter"
-            >
-              <p>Jag vill ha fest</p>
-            </Collapsible>
-            <Collapsible
-              triggerClassName="main-trigger"
-              transitionTime={400}
-              trigger="Transport"
-            >
-              <img src={bilpool} className="logos" alt="logo" />
-            </Collapsible>
+            <Neighbours />
           </Tab>
         </Tabs>
       </div>

@@ -92,6 +92,13 @@ a {
 .one-line-spread {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.one-line-left {
+  display: flex !important;
+  align-items: center;
+  justify-content: left;
 }
 
 .one-line-column {
@@ -138,6 +145,13 @@ a {
 }
 
 //Items
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
 .logo {
   height: 15vmin;
   pointer-events: none;
@@ -251,4 +265,3 @@ a {
   font-weight: 400;
 }
 
-@import 'components/Collapsible';
