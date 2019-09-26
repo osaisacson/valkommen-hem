@@ -56,6 +56,10 @@ a {
   text-transform: uppercase;
 }
 
+.list-group-item {
+  background-color: transparent !important;
+}
+
 .nav-tabs {
   background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 0;
