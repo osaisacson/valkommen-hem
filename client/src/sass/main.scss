@@ -38,8 +38,7 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: 'Libre Franklin', sans-serif;
   text-transform: uppercase;
   width: fit-content;
@@ -71,8 +70,10 @@ a {
 }
 
 .blockquote {
+  margin-top: 10px;
   background-color: slategrey;
   color: white;
+  border-radius: 2px;
 }
 
 .card {

@@ -22,7 +22,7 @@ export default class Production extends Component {
             eventKey="1"
             className="one-line-spread"
           >
-            <h2>Grannar</h2>
+            <h4>Grannar</h4>
             <span className="badge badge-primary badge-pill">4</span>
           </Accordion.Toggle>
 
