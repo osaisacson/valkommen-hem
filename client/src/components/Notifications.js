@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import Badge from 'react-bootstrap/Badge';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react";
+import Badge from "react-bootstrap/Badge";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
 
 export default class Notifications extends Component {
   // Then we add our constructor which receives our props

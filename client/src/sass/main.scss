@@ -3,7 +3,7 @@
 @import 'base/clearfix';
 @import 'base/variables';
 @import 'base/mixins';
-@import '~semantic-ui-css/semantic.css';
+
 
 //Main
 html {
@@ -74,10 +74,10 @@ a {
 }
 
 .blockquote {
-  margin-top: 10px;
+  text-align: center;
   background-color: slategrey;
   color: white;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .card {

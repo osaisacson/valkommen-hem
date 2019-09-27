@@ -2,8 +2,6 @@ import React from 'react';
 import './sass/main.scss';
 import './dataset.js';
 
-import '../../node_modules/react-vis/dist/style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Notifications from './components/Notifications.js';

@@ -1,18 +1,18 @@
-import React from 'react';
-import CountUp from 'react-countup';
+import React from "react";
+import CountUp from "react-countup";
 
 class AccordionInfo extends React.Component {
   render() {
     return (
       <div>
         <h5 className="accordion-info">
-          <div className="tid">Förra månaden:</div>{' '}
+          <div className="tid">Förra månaden:</div>{" "}
           <div className="nr">
             {this.props.lastMonth} {this.props.unit}
           </div>
         </h5>
         <h5 className="accordion-info">
-          <div className="tid">Denna månaden:</div>{' '}
+          <div className="tid">Denna månaden:</div>{" "}
           <div className="nr">
             <CountUp
               start={this.props.thisMonthStart}
@@ -21,12 +21,12 @@ class AccordionInfo extends React.Component {
               duration={this.props.thisMonthDuration}
               separator=" "
               redraw
-            />{' '}
+            />{" "}
             {this.props.unit}
           </div>
         </h5>
         <h5 className="accordion-info">
-          <div className="tid">Detta året:</div>{' '}
+          <div className="tid">Detta året:</div>{" "}
           <div className="nr">
             <CountUp
               start={this.props.thisYearStart}
@@ -35,13 +35,15 @@ class AccordionInfo extends React.Component {
               duration={this.props.thisYearDuration}
               separator=" "
               redraw
-            />{' '}
+            />{" "}
             {this.props.unit}
           </div>
         </h5>
+        <br></br>
+        <br></br>
         <blockquote className="blockquote mb-0 card-body">
           <div>
-            {this.props.quoteBefore}{' '}
+            {this.props.quoteBefore}{" "}
             <strong>
               <CountUp
                 start={this.props.quoteStart}
@@ -50,7 +52,7 @@ class AccordionInfo extends React.Component {
                 duration={this.props.quoteDuration}
                 separator=" "
                 redraw
-              />{' '}
+              />{" "}
               {this.props.quoteUnit}
             </strong>
             {this.props.quoteAfter}.

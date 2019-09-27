@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import CountUp from 'react-countup';
-import AccordionInfo from './../components/AccordionInfo';
-import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react";
+import CountUp from "react-countup";
+import AccordionInfo from "./../components/AccordionInfo";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
 
 export default class Production extends Component {
   // Then we add our constructor which receives our props
@@ -28,15 +27,15 @@ export default class Production extends Component {
                     <div className="accordion-custom-title">{item.title}</div>
                     <div className="accordion-custom-countup">
                       <CountUp
-                        start={item.thisMonthStart}
-                        end={item.thisMonthEnd}
-                        duration={item.thisMonthDuration}
+                        start={item.thisYearStart}
+                        end={item.thisYearEnd}
+                        duration={item.thisYearDuration}
                         separator=" "
                         redraw
                       />
                       <span className="accordion-custom-title">
-                        {' '}
-                        {item.unit}{' '}
+                        {" "}
+                        {item.unit}{" "}
                       </span>
                     </div>
                   </div>
