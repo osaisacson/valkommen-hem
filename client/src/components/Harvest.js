@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Book from "./../components/Book";
-import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
+import React, { Component } from 'react';
+import Book from './../components/Book';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 export default class Harvest extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class Harvest extends Component {
   }
 
   onClick() {
-    this.setState({ text: "Redo att hämtas imorgon 12:00" });
+    this.setState({ text: 'Redo att hämtas imorgon 12:00' });
   }
 
   render() {
@@ -25,7 +25,7 @@ export default class Harvest extends Component {
           {this.state.harvest.map(item => (
             <Card key={item.id}>
               <Card.Img variant="top" src={item.img} />
-              <Card.ImgOverlay>
+              <Card.ImgOverlay className="no-padding">
                 <Card.Body>
                   <Card.Title className="card-img-overlay-text">
                     {item.title}
@@ -35,7 +35,7 @@ export default class Harvest extends Component {
                       {item.subtitle}
                     </Card.Text>
                   ) : (
-                    ""
+                    ''
                   )}
                 </Card.Body>
                 <Book />

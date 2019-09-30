@@ -1,15 +1,15 @@
-import React from 'react';
-import './sass/main.scss';
-import './dataset.js';
+import React from "react";
+import "./sass/main.scss";
+import "./dataset.js";
 
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
-import Notifications from './components/Notifications.js';
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
+import Notifications from "./components/Notifications.js";
 
-import Choices from './components/Choices';
-import Harvest from './components/Harvest';
-import Neighbours from './components/Neighbours';
-import Production from './components/Production';
+import Choices from "./components/Choices";
+import Harvest from "./components/Harvest";
+import Neighbours from "./components/Neighbours";
+import Production from "./components/Production";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,10 +24,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="one-line-left">
-          <img src={'/logo.png'} className="logo" alt="logo" />
+          <img src={"/logo.png"} className="logo" alt="logo" />
           <div className="header-title">
-            <h2>Välkommen hem till</h2>
-            <h1>Resilienshus Floda</h1>
+            <h6 className="no-margin">Välkommen hem till</h6>
+            <h3>Resilienshus Floda</h3>
           </div>
         </header>
 
@@ -46,7 +46,7 @@ class App extends React.Component {
             <Choices />
           </Tab>
 
-          <Tab eventKey="neighbours" title="Grannar">
+          <Tab eventKey="neighbours" title="Huset">
             <Neighbours />
           </Tab>
         </Tabs>

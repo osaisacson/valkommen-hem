@@ -1,13 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,600,900&display=swap);
-@import 'base/reset';
-@import 'base/clearfix';
-@import 'base/variables';
-@import 'base/mixins';
+@import 'base/variables.scss';
 
 
 //Main
 html {
-  font-size: $BASE_FONT_SIZE;
   background: url('https://images.unsplash.com/photo-1531904895138-ac676f9f125a?ixlib=rb-1.2.1&auto=format&fit=crop&w=976&q=80')
     no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -17,7 +13,6 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: unset !important;
 }
 
@@ -28,24 +23,17 @@ body {
   //  }
 }
 
-#root {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 //Text
 
 h1,
 h2,
 h3 {
   font-family: 'Libre Franklin', sans-serif;
-  text-transform: uppercase;
-  width: fit-content;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 800;
 }
 
@@ -53,15 +41,15 @@ h2 {
 a {
   color: #666 !important;
   font-family: 'Libre Franklin', sans-serif;
-  text-transform: uppercase;
 }
 
 .list-group-item {
+  padding: 0;
   background-color: transparent !important;
 }
 
 .nav-tabs {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: $main-background;
   border-bottom: 0;
 
   .nav-link.active,
@@ -81,12 +69,12 @@ a {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, .7) !important;
+  background-color: $main-background !important;
 }
 
 .card-img-overlay-text {
-  background-color: slategray;
-  color: #fff;
+  background-color: $main-background;
+  color: $main-text-color;
   border-radius: 4px;
   padding: 5px 6px;
   width: fit-content;
@@ -112,19 +100,21 @@ a {
   margin: 15px 0;
 }
 
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.padding-top-bottom-10px {
+  padding: 10px 0;
+}
+
 //Sections
 .header-title {
   padding: 20px 0;
-
-  h1 {
-    font-size: 26px;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 15px;
-    text-transform: inherit;
-  }
 }
 
 .section-header {
@@ -228,7 +218,7 @@ a {
   flex-direction: column;
   align-items: center;
   font-weight: 600;
-  background-color: $collapsibleBackground;
+  background-color: $main-background;
 }
 
 .countUp,

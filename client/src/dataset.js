@@ -70,7 +70,7 @@ window.Dataset = {
       thisYearStart: 0,
       thisYearEnd: 340562,
       thisYearDuration: 3,
-      quoteBefore: "Och genom det drygat ut vår vattenförsöjning i år med ",
+      quoteBefore: "Och genom det drygat ut vår vattenförsörjning i år med ",
       quoteStart: 0,
       quoteEnd: 26,
       quoteDuration: 3,
@@ -188,8 +188,8 @@ window.Dataset = {
       quoteStart: 1234,
       quoteEnd: 2245,
       quoteDuration: 2000,
-      quoteUnit: "elbilar",
-      quoteAfter: " lampor konstant tända i ett år"
+      quoteUnit: "lampor",
+      quoteAfter: " konstant tända i ett år"
     },
     {
       id: "9",
@@ -271,6 +271,31 @@ window.Dataset = {
         "https://content-static.upwork.com/blog/uploads/sites/4/2014/10/27173913/BLOG-Upwork-profile-photo-face.png",
       name: "Fatima Scharman",
       description: "På första våningen and loving it!"
+    }
+  ],
+
+  exchanges: [
+    {
+      id: "1",
+      img: "https://source.unsplash.com/collection/190727/1600x900",
+      userImg:
+        "https://i1.wp.com/linuxcreations.tips/wp-content/uploads/2019/01/migliorare-foto.jpg?resize=160%2C160&ssl=1",
+      userName: "May",
+      time: "2 hours ago",
+      title: "Låna borr imorgon?",
+      description:
+        "Jag har köpt nya hyllor och undrar om det är någon som skulle kunna låna ut sin borr några timmar imorgon kväll?"
+    },
+    {
+      id: "2",
+      img: "https://source.unsplash.com/collection/190727/1600x900",
+      userImg:
+        "https://content-static.upwork.com/uploads/2014/10/02123010/profilephoto_goodcrop.jpg",
+      userName: "Carl",
+      time: "6 hours ago",
+      title: "Bilpool på Fredag!",
+      description:
+        "Vi har en plats kvar i bilpoolen till stan på Fredag, kontakta mig så kör (ursäkta) vi!"
     }
   ],
 

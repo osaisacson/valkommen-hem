@@ -19,10 +19,9 @@ export default class Notifications extends Component {
         <Accordion>
           <Card>
             <Accordion.Toggle as={Card.Header} eventKey="1">
-              <div className="header-and-badge">
-                <span>Uppdateringar </span>
-                <Badge variant="danger">2</Badge>
-              </div>
+              <h6 className="no-margin">
+                Uppdateringar <Badge variant="danger">2</Badge>
+              </h6>
             </Accordion.Toggle>
 
             <Accordion.Collapse eventKey="1">
