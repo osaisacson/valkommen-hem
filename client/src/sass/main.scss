@@ -63,7 +63,7 @@ a {
 
 .blockquote {
   text-align: center;
-  background-color: slategrey;
+  background-color: rgba(0, 0, 0, .5);
   color: white;
   border-radius: 3px;
 }
@@ -75,7 +75,7 @@ a {
 .card-img-overlay-text {
   background-color: $main-background;
   color: $main-text-color;
-  border-radius: 4px;
+  border-radius: 3px;
   padding: 5px 6px;
   width: fit-content;
 }
@@ -184,7 +184,6 @@ a {
 .accordion-info {
   @extend .one-line-spread;
   justify-content: space-between;
-  margin: 0 20px;
 
   .nr {
     font-weight: 600;

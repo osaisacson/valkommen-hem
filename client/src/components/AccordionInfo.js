@@ -5,15 +5,15 @@ class AccordionInfo extends React.Component {
   render() {
     return (
       <div>
-        <h5 className="accordion-info">
-          <div className="tid">Förra månaden:</div>{" "}
-          <div className="nr">
+        <div className="accordion-info">
+          <h6 className="tid">Förra månaden:</h6>{" "}
+          <h6 className="nr">
             {this.props.lastMonth} {this.props.unit}
-          </div>
-        </h5>
-        <h5 className="accordion-info">
-          <div className="tid">Denna månaden:</div>{" "}
-          <div className="nr">
+          </h6>
+        </div>
+        <div className="accordion-info">
+          <h6 className="tid">Denna månaden:</h6>{" "}
+          <h6 className="nr">
             <CountUp
               start={this.props.thisMonthStart}
               end={this.props.thisMonthEnd}
@@ -23,11 +23,11 @@ class AccordionInfo extends React.Component {
               redraw
             />{" "}
             {this.props.unit}
-          </div>
-        </h5>
-        <h5 className="accordion-info">
-          <div className="tid">Detta året:</div>{" "}
-          <div className="nr">
+          </h6>
+        </div>
+        <div className="accordion-info">
+          <h6 className="tid">Detta året:</h6>{" "}
+          <h6 className="nr">
             <CountUp
               start={this.props.thisYearStart}
               end={this.props.thisYearEnd}
@@ -37,26 +37,23 @@ class AccordionInfo extends React.Component {
               redraw
             />{" "}
             {this.props.unit}
-          </div>
-        </h5>
-        <br></br>
+          </h6>
+        </div>
         <br></br>
         <blockquote className="blockquote mb-0 card-body">
-          <div>
-            {this.props.quoteBefore}{" "}
-            <strong>
-              <CountUp
-                start={this.props.quoteStart}
-                end={this.props.quoteEnd}
-                delay={1}
-                duration={this.props.quoteDuration}
-                separator=" "
-                redraw
-              />{" "}
-              {this.props.quoteUnit}
-            </strong>
-            {this.props.quoteAfter}.
-          </div>
+          {this.props.quoteBefore}{" "}
+          <strong>
+            <CountUp
+              start={this.props.quoteStart}
+              end={this.props.quoteEnd}
+              delay={1}
+              duration={this.props.quoteDuration}
+              separator=" "
+              redraw
+            />{" "}
+            {this.props.quoteUnit}
+          </strong>
+          {this.props.quoteAfter}.
         </blockquote>
       </div>
     );
