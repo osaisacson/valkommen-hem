@@ -51,14 +51,17 @@ a {
 }
 
 .nav-tabs {
-  background-color: $main-background;
+  background-color: rgba(0, 0, 0, .5);
   border-bottom: 0;
+
+  .nav-link {
+    color: #fff !important;
+  }
 
   .nav-link.active,
   .nav-link:hover {
     background-color: transparent !important;
     border: 0 !important;
-    color: #000 !important;
     font-weight: 600 !important;
   }
 }
