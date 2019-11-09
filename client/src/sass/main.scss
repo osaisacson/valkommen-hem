@@ -18,6 +18,8 @@ body {
 
 .App {
   margin-bottom: 150px;
+  max-width: 400px;
+  margin: auto;
   //   @include for-phone-only {
   //     background-color: #282c34;
   //  }
@@ -78,6 +80,13 @@ a {
   border-radius: 3px;
   padding: 5px 6px;
   width: fit-content;
+}
+
+@media (min-width: 576px){
+  .card-group {
+      -ms-flex-flow: column;
+      flex-flow: column;
+    }
 }
 
 
